@@ -28,14 +28,14 @@ Local $aDBKeyValue[0][6]
 Local $iDBGameDataStart = 0
 Local $iDBGameDataEnd   = 18
 _ArrayAdd($aDBKeyValue, 'game_name||<game name="|(|1|0')
-_ArrayAdd($aDBKeyValue, 'date||"|"|1|0')
-_ArrayAdd($aDBKeyValue, 'publisher||"|"|1|0')
-_ArrayAdd($aDBKeyValue, 'region||"|"|1|0')
-_ArrayAdd($aDBKeyValue, 'country_code||"|"|1|0')
+_ArrayAdd($aDBKeyValue, 'date||||1|0')
+_ArrayAdd($aDBKeyValue, 'publisher||||1|0')
+_ArrayAdd($aDBKeyValue, 'region||||1|0')
+_ArrayAdd($aDBKeyValue, 'country_code||||1|0')
 _ArrayAdd($aDBKeyValue, 'rev||Rev |"|1|0')
-_ArrayAdd($aDBKeyValue, 'proto||"|"|1|0')
-_ArrayAdd($aDBKeyValue, 'video_format||"|"|1|0')
-_ArrayAdd($aDBKeyValue, 'file_type||"|"|1|0')
+_ArrayAdd($aDBKeyValue, 'proto||||1|0')
+_ArrayAdd($aDBKeyValue, 'video_format||||1|0')
+_ArrayAdd($aDBKeyValue, 'file_type||||1|0')
 _ArrayAdd($aDBKeyValue, 'size||size="|"|1|0')
 _ArrayAdd($aDBKeyValue, 'crc||crc="|"|1|0')
 _ArrayAdd($aDBKeyValue, 'md5||md5="|"|1|0')
@@ -99,50 +99,13 @@ Func Start()
 					; string split the target value
 					Local $sValue = StringBetweenTwoDelimiters($sRow, $sDelLeft, $sDelRight, $iLeft, $iRight)
 
-					Select
-						; clean up game title
-						Case $key = 'game_name'
-							$sValue = RestoreGameTitle($sValue)
+                    If $key = 'game_name' Then
+                        $sValue = RestoreGameTitle($sValue)
+                    EndIf
 
-						; get Date value from game title
-						Case $key = 'date'
-							;$sValue = GetDate($sValue)
-							$sValue = 'date'
-							;ConsoleLog($sValue)
-
-						;
-						Case $key = 'rom_name'
-							$sValue = 'rom_name'
-
-						;
-						Case $key = 'publisher'
-							$sValue = 'publisher'
-
-						;
-						Case $key = 'region'
-							$sValue = 'region'
-
-						;
-						Case $key = 'country_code'
-							$sValue = 'country_code'
-
-						; get Rev #
-						Case $key = 'rev'
-							$sValue = GetRevNumber($sValue)
-
-						;
-						Case $key = 'proto'
-							$sValue = 'proto'
-
-						;
-						Case $key = 'video_format'
-							$sValue = 'video_format'
-
-						;
-						Case $key = 'file_type'
-							$sValue = 'file_type'
-
-					EndSelect
+                    If $key = 'rev' Then
+                        $sValue = GetRevNumber($sValue)
+                    EndIf
 
 					; remove extra characters
 					$sValue = FixFormatting($sValue)
@@ -153,6 +116,51 @@ Func Start()
 					; mark found something in row
 					$isSomethingDedected = True
 				EndIf
+
+				;Select
+                ;    ; clean up game title
+                ;    Case $key = 'game_name'
+                ;        $sValue = RestoreGameTitle($sValue)
+;
+                ;    ; get Date value from game title
+                ;    Case $key = 'date'
+                ;        ;$sValue = GetDate($sValue)
+                ;        $sValue = 'date'
+                ;        ;ConsoleLog($sValue)
+;
+                ;    ;
+                ;    Case $key = 'rom_name'
+                ;        $sValue = 'rom_name'
+;
+                ;    ;
+                ;    Case $key = 'publisher'
+                ;        $sValue = 'publisher'
+;
+                ;    ;
+                ;    Case $key = 'region'
+                ;        $sValue = 'region'
+;
+                ;    ;
+                ;    Case $key = 'country_code'
+                ;        $sValue = 'country_code'
+;
+                ;    ; get Rev #
+                ;    Case $key = 'rev'
+                ;        $sValue = GetRevNumber($sValue)
+;
+                ;    ;
+                ;    Case $key = 'proto'
+                ;        $sValue = 'proto'
+;
+                ;    ;
+                ;    Case $key = 'video_format'
+                ;        $sValue = 'video_format'
+;
+                ;    ;
+                ;    Case $key = 'file_type'
+                ;        $sValue = 'file_type'
+;
+                ;EndSelect
 
 				; check if header data has loaded
 				If $isHeaderDataLoaded = False AND StringRegExp($sRow, '</header>') Then $isHeaderDataLoaded = True
