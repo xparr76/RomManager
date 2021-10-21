@@ -10,13 +10,11 @@
 Local $sDatFolder    = @ScriptDir & '\DatFiles'
 Local $sDBFile 	     = @ScriptDir & '\SQLiteTestDatabase.db'
 Local $hDB  	     = ''
-Local $debug 	     = False	; turn on debugging
+Local $debug 	     = False  ; turn on debugging
 Local $iDbKey 	     = 0
 Local $iDbValue      = 1
 Local $iDbDelLeft    = 2
 Local $iDbDelRight   = 3
-Local $iDbIndexLeft  = 4
-Local $iDbIndexRight = 5
 ; initialize DB keys
 Local $aDBKeyValue[0][6]
 ; column titles
@@ -24,39 +22,70 @@ Local $aDBKeyValue[0][6]
 ;$aDBKeyValue[0][$iDbValue]    = 'value'
 ;$aDBKeyValue[0][$iDbDelLeft]  = 'delimiter_left'
 ;$aDBKeyValue[0][$iDbDelRight] = 'delimiter_right'
-; game data - key/value
+; ---- game data - key/value
 Local $iDBGameDataStart = 0
-Local $iDBGameDataEnd   = 18
-_ArrayAdd($aDBKeyValue, 'game_name||<game name="|(|1|0')
-_ArrayAdd($aDBKeyValue, 'date||||1|0')
-_ArrayAdd($aDBKeyValue, 'publisher||||1|0')
-_ArrayAdd($aDBKeyValue, 'region||||1|0')
-_ArrayAdd($aDBKeyValue, 'country_code||||1|0')
-_ArrayAdd($aDBKeyValue, 'rev||Rev |"|1|0')
-_ArrayAdd($aDBKeyValue, 'proto||||1|0')
-_ArrayAdd($aDBKeyValue, 'video_format||||1|0')
-_ArrayAdd($aDBKeyValue, 'file_type||||1|0')
-_ArrayAdd($aDBKeyValue, 'size||size="|"|1|0')
-_ArrayAdd($aDBKeyValue, 'crc||crc="|"|1|0')
-_ArrayAdd($aDBKeyValue, 'md5||md5="|"|1|0')
-_ArrayAdd($aDBKeyValue, 'sha1||sha1="|"|1|0')
-_ArrayAdd($aDBKeyValue, 'cloneof||cloneof="|"|1|0')
-_ArrayAdd($aDBKeyValue, 'description||<description>|</description>|1|0')
-_ArrayAdd($aDBKeyValue, 'release_name||<release name="|"|1|0')
-_ArrayAdd($aDBKeyValue, 'rom_name||<rom name="|"|1|0')
-_ArrayAdd($aDBKeyValue, 'status||status="|"|1|0')
-_ArrayAdd($aDBKeyValue, 'notes||||1|0')
-; header - key/value
-Local $iDBHeaderDataStart = 19
-Local $iDBHeaderDataEnd   = 27
-_ArrayAdd($aDBKeyValue, 'header_name||<name>|</name>|1|0')
-_ArrayAdd($aDBKeyValue, 'header_description||<description>|</description>|1|0')
-_ArrayAdd($aDBKeyValue, 'header_clrmamepro||<clrmamepro header="|"/>|1|0')
-_ArrayAdd($aDBKeyValue, 'header_romcenter_plugin||<romcenter plugin="|"/>|1|0')
-_ArrayAdd($aDBKeyValue, 'header_version||<version>|</version>|1|0')
-_ArrayAdd($aDBKeyValue, 'header_date||<date>|</date>|1|0')
-_ArrayAdd($aDBKeyValue, 'header_author||<author>|</author>|1|0')
-_ArrayAdd($aDBKeyValue, 'header_url||<url>|</url>|1|0')
+_ArrayAdd($aDBKeyValue, 'game_name||<game name="|(')
+Local $iGame_name = 0
+_ArrayAdd($aDBKeyValue, 'date|||')
+Local $iDate = 1
+_ArrayAdd($aDBKeyValue, 'publisher|||')
+Local $iPublisher = 2
+_ArrayAdd($aDBKeyValue, 'region||region="|"')
+Local $iRegion = 3
+_ArrayAdd($aDBKeyValue, 'country_code|||')
+Local $iCountry_code = 4
+_ArrayAdd($aDBKeyValue, 'rev||Rev |"')
+Local $iRev = 5
+_ArrayAdd($aDBKeyValue, 'proto|||')
+Local $iProto = 6
+_ArrayAdd($aDBKeyValue, 'video_format|||')
+Local $iVideo_format = 7
+_ArrayAdd($aDBKeyValue, 'file_type|||')
+Local $iFile_type = 8
+_ArrayAdd($aDBKeyValue, 'size||size="|"')
+Local $iSize = 9
+_ArrayAdd($aDBKeyValue, 'crc||crc="|"')
+Local $iCrc = 10
+_ArrayAdd($aDBKeyValue, 'md5||md5="|"')
+Local $iMd5 = 11
+_ArrayAdd($aDBKeyValue, 'sha1||sha1="|"')
+Local $iSha1 = 12
+_ArrayAdd($aDBKeyValue, 'disk|||')
+Local $iDisk = 13
+_ArrayAdd($aDBKeyValue, 'cloneof||cloneof="|"')
+Local $iCloneof = 14
+_ArrayAdd($aDBKeyValue, 'description||<description>|</description>')
+Local $iDescription = 15
+_ArrayAdd($aDBKeyValue, 'release_name||<release name="|"')
+Local $iRelease_name = 16
+_ArrayAdd($aDBKeyValue, 'rom_name||<rom name="|"')
+Local $iRom_name = 17
+_ArrayAdd($aDBKeyValue, 'status||status="|"')
+Local $iStatus = 18
+_ArrayAdd($aDBKeyValue, 'notes|||')
+Local $iNotes = 19
+; end of game data
+Local $iDBGameDataEnd = 19
+; ---- header - key/value
+Local $iDBHeaderDataStart = 20
+_ArrayAdd($aDBKeyValue, 'header_name||<name>|</name>')
+Local $iHeader_name = 20
+_ArrayAdd($aDBKeyValue, 'header_description||<description>|</description>')
+Local $iHeader_description = 21
+_ArrayAdd($aDBKeyValue, 'header_clrmamepro||<clrmamepro header="|"/>')
+Local $iHeader_clrmamepro = 22
+_ArrayAdd($aDBKeyValue, 'header_romcenter_plugin||<romcenter plugin="|"/>')
+Local $iHeader_romcenter_plugin = 23
+_ArrayAdd($aDBKeyValue, 'header_version||<version>|</version>')
+Local $iHeader_version = 24
+_ArrayAdd($aDBKeyValue, 'header_date||<date>|</date>')
+Local $iHeader_date = 25
+_ArrayAdd($aDBKeyValue, 'header_author||<author>|</author>')
+Local $iHeader_author = 26
+_ArrayAdd($aDBKeyValue, 'header_url||<url>|</url>')
+Local $iHeader_url = 27
+; end of header data
+Local $iDBHeaderDataEnd = 27
 ;_ArrayDisplay($aDBKeyValue, "Results from the query")
 
 Start()
@@ -69,129 +98,135 @@ Func Start()
 
 	; loop over files
 	For $sFile In $aRomFiles
-		Local $isHeaderDataLoaded = false	; reset after each new file is loaded
-		Local $isNewGameTitle = False
+		ConsoleLog('new file')
+		Local $isHeaderDataLoaded = False
+		;Local $isGameDataLoaded = False
+		Local $aRomName[0]
+		ConsoleLog($aRomName)
 
 		; capture game data
-		Local $aRow = ArrayOfFileContents($sFile)
-		For $sRow In $aRow
-			Local $isSomethingDedected = False
+		Local $aRows = ArrayOfFileContents($sFile)
+		For $sRow In $aRows
 
-			; loop over array of game data points to capture
-			For $iIndex = 0 To UBound($aDBKeyValue, $UBOUND_ROWS) - 1
-				Local $key 		 = $aDBKeyValue[$iIndex][$iDbKey]
-				Local $value 	 = $aDBKeyValue[$iIndex][$iDbValue]
-				Local $sDelLeft  = $aDBKeyValue[$iIndex][$iDbDelLeft]
-				Local $sDelRight = $aDBKeyValue[$iIndex][$iDbDelRight]
-				Local $iLeft 	 = $aDBKeyValue[$iIndex][$iDbIndexLeft]
-				Local $iRight 	 = $aDBKeyValue[$iIndex][$iDbIndexRight]
+			;ConsoleLog('==================================')
+			;ConsoleLog('new row')
+			;ConsoleLog($sRow)
 
-				; only check header data once from array keys "$aDBKeyValue"
-				If $isHeaderDataLoaded AND $iIndex >= $iDBHeaderDataStart Then
-					ContinueLoop
-				EndIf
+			Select
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, '<?xml version')
+					; do nothing
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, '<!DOCTYPE')
+					; do nothing
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, '<datafile>')
+					; do nothing
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, '<header>')
+					; do nothing
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_name][$iDbDelLeft])
+					$aDBKeyValue[$iHeader_name][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_name][$iDbDelLeft], $aDBKeyValue[$iHeader_name][$iDbDelRight])
 
-				; check each line for left delimiter designated in $aDBKeyValue array
-				If StringRegExp($sRow, $sDelLeft) AND $sDelLeft <> "" Then
-					;ConsoleLog('=================================')
-					;ConsoleLog($key)
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_description][$iDbDelLeft])
+					$aDBKeyValue[$iHeader_description][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_description][$iDbDelLeft], $aDBKeyValue[$iHeader_description][$iDbDelRight])
 
-					; string split the target value
-					Local $sValue = StringBetweenTwoDelimiters($sRow, $sDelLeft, $sDelRight, $iLeft, $iRight)
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_clrmamepro][$iDbDelLeft])
+					$aDBKeyValue[$iHeader_clrmamepro][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_clrmamepro][$iDbDelLeft], $aDBKeyValue[$iHeader_clrmamepro][$iDbDelRight])
 
-                    If $key = 'game_name' Then
-                        $sValue = RestoreGameTitle($sValue)
-                    EndIf
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_romcenter_plugin][$iDbDelLeft])
+					$aDBKeyValue[$iHeader_romcenter_plugin][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_romcenter_plugin][$iDbDelLeft], $aDBKeyValue[$iHeader_romcenter_plugin][$iDbDelRight])
 
-                    If $key = 'rev' Then
-                        $sValue = GetRevNumber($sValue)
-                    EndIf
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_version][$iDbDelLeft])
+					$aDBKeyValue[$iHeader_version][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_version][$iDbDelLeft], $aDBKeyValue[$iHeader_version][$iDbDelRight])
 
-					; remove extra characters
-					$sValue = FixFormatting($sValue)
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_date][$iDbDelLeft])
+					$aDBKeyValue[$iHeader_date][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_date][$iDbDelLeft], $aDBKeyValue[$iHeader_date][$iDbDelRight])
 
-					; save new value to array
-					$aDBKeyValue[$iIndex][$iDbValue] = $sValue
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_author][$iDbDelLeft])
+					$aDBKeyValue[$iHeader_author][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_author][$iDbDelLeft], $aDBKeyValue[$iHeader_author][$iDbDelRight])
 
-					; mark found something in row
-					$isSomethingDedected = True
-				EndIf
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_url][$iDbDelLeft])
+					$aDBKeyValue[$iHeader_url][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_url][$iDbDelLeft], $aDBKeyValue[$iHeader_url][$iDbDelRight])
 
-				;Select
-                ;    ; clean up game title
-                ;    Case $key = 'game_name'
-                ;        $sValue = RestoreGameTitle($sValue)
-;
-                ;    ; get Date value from game title
-                ;    Case $key = 'date'
-                ;        ;$sValue = GetDate($sValue)
-                ;        $sValue = 'date'
-                ;        ;ConsoleLog($sValue)
-;
-                ;    ;
-                ;    Case $key = 'rom_name'
-                ;        $sValue = 'rom_name'
-;
-                ;    ;
-                ;    Case $key = 'publisher'
-                ;        $sValue = 'publisher'
-;
-                ;    ;
-                ;    Case $key = 'region'
-                ;        $sValue = 'region'
-;
-                ;    ;
-                ;    Case $key = 'country_code'
-                ;        $sValue = 'country_code'
-;
-                ;    ; get Rev #
-                ;    Case $key = 'rev'
-                ;        $sValue = GetRevNumber($sValue)
-;
-                ;    ;
-                ;    Case $key = 'proto'
-                ;        $sValue = 'proto'
-;
-                ;    ;
-                ;    Case $key = 'video_format'
-                ;        $sValue = 'video_format'
-;
-                ;    ;
-                ;    Case $key = 'file_type'
-                ;        $sValue = 'file_type'
-;
-                ;EndSelect
+				Case Not $isHeaderDataLoaded And StringInStr($sRow, '</header>')
+					$isHeaderDataLoaded = True
 
-				; check if header data has loaded
-				If $isHeaderDataLoaded = False AND StringRegExp($sRow, '</header>') Then $isHeaderDataLoaded = True
+				Case StringInStr($sRow, $aDBKeyValue[$iGame_name][$iDbDelLeft])
+					ConsoleLog('===========================================')
+					$aDBKeyValue[$iGame_name][$iDbValue] = FixFormatting(RestoreGameTitle(StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iGame_name][$iDbDelLeft], $aDBKeyValue[$iGame_name][$iDbDelRight])))
+					$date = ''
+					$publisher = ''
+					$country_code = ''
+					$aDBKeyValue[$iRev][$iDbValue] = GetRevNumber(StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRev][$iDbDelLeft], $aDBKeyValue[$iRev][$iDbDelRight]))
+					$proto = ''
+					$video_format = ''
+					$aDBKeyValue[$iCloneof][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iCloneof][$iDbDelLeft], $aDBKeyValue[$iCloneof][$iDbDelRight])
+					;Local $aDelRight = StringSplit($sRow, '<game name="', $STR_ENTIRESPLIT + $STR_NOCOUNT)
 
-				; check for the start of next game title
-				If $isNewGameTitle = False AND StringRegExp($sRow, '<game name="') Then $isNewGameTitle = True
-			Next
+				Case StringInStr($sRow, $aDBKeyValue[$iDescription][$iDbDelLeft])
+					$aDBKeyValue[$iDescription][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iDescription][$iDbDelLeft], $aDBKeyValue[$iDescription][$iDbDelRight])
 
-			; insert data into DB after All info for EACH game title is found
-			If $isHeaderDataLoaded AND $isNewGameTitle AND StringRegExp($sRow, '</game>') Then
-				InsertToDB($hDB, $aDBKeyValue)
-				$isNewGameTitle = False
+				Case StringInStr($sRow, $aDBKeyValue[$iRelease_name][$iDbDelLeft])
+					$aDBKeyValue[$iRelease_name][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRelease_name][$iDbDelLeft], $aDBKeyValue[$iRelease_name][$iDbDelRight])
+					$aDBKeyValue[$iRegion][$iDbValue] = StringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRegion][$iDbDelLeft], $aDBKeyValue[$iRegion][$iDbDelRight])
 
-				; clear captured Values only, leave header Values
-				For $iIndex = $iDBGameDataStart To $iDBGameDataEnd
-					$aDBKeyValue[$iIndex][$iDbValue] = ""
-				Next
-			EndIf
+				Case StringInStr($sRow, '<rom name=')
+					; rom name, file type, size, crc, md5, sha1, status
+					Local $rom_name = StringBetweenTwoDelimiters($sRow, '<rom name="', '"')
+					Local $disk = AppendToNonEmpty(StringBetweenTwoDelimiters($sRow, '1of', ')'), '1 of ')
+					Local $file_type = StringRight($rom_name, 3)
+					Local $size = StringBetweenTwoDelimiters($sRow, 'size="', '"')
+					Local $crc = StringBetweenTwoDelimiters($sRow, 'crc="', '"')
+					Local $md5 = StringBetweenTwoDelimiters($sRow, 'md5="', '"')
+					Local $sha1 = StringBetweenTwoDelimiters($sRow, 'sha1="', '"')
+					Local $status = StringBetweenTwoDelimiters($sRow, 'status="', '"')
+					_ArrayAdd($aRomName, $rom_name & '_' & $disk & '_' & $file_type & '_' & $size & '_' & $crc & '_' & $md5 & '_' & $sha1 & '_' & $status, $ARRAYFILL_FORCE_SINGLEITEM)
 
-			CheckSkippedRow($sRow, $isSomethingDedected)
-		Next
+				Case StringInStr($sRow, '</game>')
+					For $sRom In $aRomName
+						Local $aValue = StringSplit($sRom, '_', $STR_NOCOUNT)
 
-		; clear all Values from array for next file
-		For $iIndex = 0 To UBound($aDBKeyValue, $UBOUND_ROWS) - 1
-			$aDBKeyValue[$iIndex][$iDbValue] = ""
+						$aDBKeyValue[$iRom_name][$iDbValue]  = $aValue[0]
+						$aDBKeyValue[$iDisk][$iDbValue] 	 = $aValue[1]
+						$aDBKeyValue[$iFile_type][$iDbValue] = $aValue[2]
+						$aDBKeyValue[$iSize][$iDbValue] 	 = $aValue[3]
+						$aDBKeyValue[$iCrc][$iDbValue] 		 = $aValue[4]
+						$aDBKeyValue[$iMd5][$iDbValue] 		 = $aValue[5]
+						$aDBKeyValue[$iSha1][$iDbValue] 	 = $aValue[6]
+						$aDBKeyValue[$iStatus][$iDbValue]    = $aValue[7]
+						InsertToDB($hDB, $aDBKeyValue)
+					Next
+
+					; reset rom_name array
+					Local $aRomName[0]
+
+					; reset values for next game title
+					For $iIndex = $iDBGameDataStart To $iDBGameDataEnd
+						$aDBKeyValue[$iIndex][$iDbValue] = ""
+					Next
+
+				Case StringInStr($sRow, '</datafile>')
+					;End of File
+
+				Case Else
+					ConsoleLog('missing data')
+					$notes = 'nothing found'
+
+			EndSelect
 		Next
 	Next
 
 	;_ArrayDisplay($aDBKeyValue, "Results from the query")
 
 	StopDB($hDB, true, true)
+EndFunc
+
+; *************************************************
+;
+; *************************************************
+Func AppendToNonEmpty($string, $sAppend)
+	If $string == 0 Or $string == '' Then
+		Return ''
+	Else
+		Return $sAppend & $string
+	EndIf
 EndFunc
 
 ; *************************************************
@@ -225,23 +260,18 @@ EndFunc
 ; *************************************************
 ;
 ; *************************************************
-Func StringBetweenTwoDelimiters($string, $sDelLeft, $sDelRight, $iLeft, $iRight)
+Func StringBetweenTwoDelimiters($string, $sDelLeft, $sDelRight)
 	If $sDelLeft <> "" AND $sDelRight <> "" Then
 		Local $aDelLeft = StringSplit($string, $sDelLeft, $STR_ENTIRESPLIT + $STR_NOCOUNT)
-		;ConsoleLog('UBound($aDelLeft): ' & UBound($aDelLeft) & '  $iLeft: ' & $iLeft & '  $sDelLeft: ' & $sDelLeft)
-		;ConsoleLog($aDelLeft)
 
 		If UBound($aDelLeft) > 1 Then
-
-			;If UBound($sDelRight) >= $iRight Then
-				Local $aDelRight = StringSplit($aDelLeft[1], $sDelRight, $STR_ENTIRESPLIT + $STR_NOCOUNT)
-				;ConsoleLog('UBound($aDelRight): ' & UBound($aDelRight) & '  $iRight: ' & $iRight & '  $sDelRight: ' & $sDelRight)
-				;ConsoleLog($aDelRight)
-
-				Return $aDelRight[0]
-			;EndIf
+			Local $aDelRight = StringSplit($aDelLeft[1], $sDelRight, $STR_ENTIRESPLIT + $STR_NOCOUNT)
+			Return $aDelRight[0]
 		EndIf
 	EndIf
+
+	; return empty string when nothing found
+	Return ''
 EndFunc
 
 ; *************************************************
@@ -256,8 +286,7 @@ Func InsertToDB($hDB, $aDBKeyValue)
 
 	$sNewTableValues = StringTrimRight($sNewTableValues, 3)
 	;ConsoleLog($sNewTableValues)
-;date","publisher","region","country_code","rev","proto","video_format","file_type","size","crc","md5","sha1","cloneof","description","release_name","rom_name","status","notes","header_name","header_description","header_clrmamepro","header_romcenter_plugin","header_version","header_date","header_author","header_url
-
+	;date","publisher","region","country_code","rev","proto","video_format","file_type","size","crc","md5","sha1","cloneof","description","release_name","rom_name","status","notes","header_name","header_description","header_clrmamepro","header_romcenter_plugin","header_version","header_date","header_author","header_url
 
 	;_SQLite_Exec($hDatabase, 'INSERT INTO Roms VALUES ("' & $game_name & '","' & $date & '","' & _
 	;_SQLite_Exec($hDB, 'INSERT INTO Roms VALUES (' & $game_name & '","' & ');')
@@ -340,7 +369,7 @@ Func GetRevNumber($string)
 		EndIf
 	Next
 
-	Return 'Rev ' & $string
+	Return AppendToNonEmpty($string, 'Rev ')
 EndFunc
 
 ; *************************************************
@@ -374,15 +403,15 @@ EndFunc
 ; *************************************************
 ; Fix white space and special char
 ; *************************************************
-Func FixFormatting($old)
-	If IsArray($old) Then
+Func FixFormatting($string)
+	If IsArray($string) Then
 		Local $aNew[0]
-		For $string In $old
+		For $string In $string
 			_ArrayAdd($aNew, Formatting($string))
 		Next
 		Return $aNew
 	Else
-		Return Formatting($old)
+		Return Formatting($string)
 	EndIf
 EndFunc
 
