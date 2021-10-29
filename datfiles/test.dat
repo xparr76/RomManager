@@ -11,9 +11,65 @@
 		<author>alexian, BitLooter</author>
 		<url>www.no-intro.org</url>
 	</header>
-	<game name="Title (2021)(Nintendo1)(US1)[tr en Ballzysoft][a2][v0.90]">
-		<description>description</description>
-		<rom name="rom name.abc" size="123" crc="12345678" md5="abcdefghijklmnopqrstuvwxyz123456" sha1="abcdefghijklmnopqrstuvwxyz123456789ABCDE"/>
+	<game name="Akira (1988-12-24)(Taito)(JP)[h][t][b][mapper 4]">
+		<description>Akira (1988-12-24)(Taito)(JP)[h][t][b][mapper 4]</description>
+		<rom name="Akira (1988-12-24)(Taito)(JP)[h][t][b][mapper 4].nes" size="393744" crc="70186574" md5="7ab27995172bf5a715847334227d202c" sha1="22a093128dc7bd248bb4aa7ef898aeb13bede17f"/>
+	</game>
+	<game name="God Slayer - Haruka Tenkuu no Sonata (1990-04-13)(SNK)(JP)[t2]">
+		<description>God Slayer - Haruka Tenkuu no Sonata (1990-04-13)(SNK)(JP)[t2]</description>
+		<rom name="God Slayer - Haruka Tenkuu no Sonata (1990-04-13)(SNK)(JP)[t2].nes" size="393488" crc="dfef53c9" md5="058daaf901a486c48dc106b50072e0b9" sha1="dd97c41f1ce22f5a9cca3683ae825aa2bbdae169"/>
+	</game>
+	<game name="Shin Jinrui - The New Type (1987-02-10)(Ricoh Elemex)(JP)[h Suchinhaun][title screen only]">
+		<description>Shin Jinrui - The New Type (1987-02-10)(Ricoh Elemex)(JP)[h Suchinhaun][title screen only]</description>
+		<rom name="Shin Jinrui - The New Type (1987-02-10)(Ricoh Elemex)(JP)[h Suchinhaun][title screen only].nes" size="65552" crc="8bd5ff50" md5="51cbdb0793cad6780f1111a42084f746" sha1="42dfab918420ec8891f9054e049f34b76dd7a557"/>
+	</game>
+	<game name="Mortal Kombat II (199x)(-)(AS)[p][a][turbo]">
+		<description>Mortal Kombat II (199x)(-)(AS)[p][a][turbo]</description>
+		<rom name="Mortal Kombat II (199x)(-)(AS)[p][a][turbo].nes" size="393232" crc="2f54b777" md5="4eb9ad174cb4f123efadc0b17bb6d7d2" sha1="57038378bb700964ed49c0b36b2e2ead2360c753"/>
+	</game>
+	<game name="Wai Wai World (1988-01-14)(Konami)(JP)[tr en Neo DemiForce][v.VRCbeta-19971216]">
+		<description>Wai Wai World (1988-01-14)(Konami)(JP)[tr en Neo DemiForce][v.VRCbeta-19971216]</description>
+		<rom name="Wai Wai World (1988-01-14)(Konami)(JP)[tr en Neo DemiForce][v.VRCbeta-19971216].nes" size="262160" crc="2559c8cc" md5="dbec3c1b05a2fe006a639b128957966b" sha1="df7bf622666d08ea075c99878e21882e1074e581"/>
+	</game>
+	<game name="Wagan Land (1989-02-09)(Namco)(JP)[h Vimm][tr en Alan Midas][v.wag.yan, iNES title]">
+		<description>Wagan Land (1989-02-09)(Namco)(JP)[h Vimm][tr en Alan Midas][v.wag.yan, iNES title]</description>
+		<rom name="Wagan Land (1989-02-09)(Namco)(JP)[h Vimm][tr en Alan Midas][v.wag.yan, iNES title].nes" size="196752" crc="5066af3a" md5="57af1c18b6f24c74e1232ef984a421d8" sha1="a8e57ff7d565e35ac0da55b8f74a834176fc1619"/>
+	</game>
+	<game name="20 in 1 (19xx)(-)(AS)[p][mapper 61]">
+		<description>20 in 1 (19xx)(-)(AS)[p][mapper 61]</description>
+		<rom name="20 in 1 (19xx)(-)(AS)[p][mapper 61].nes" size="524304" crc="8b4718b6" md5="e4cf231d86fdee1bd9de53e9e753c7bf" sha1="61778695aa6f417e81dfba228425a59b6fea1e66"/>
+	</game>
+	<game name="110 in 1 (19xx)(-)(AS)[h][p][menu only]">
+		<description>110 in 1 (19xx)(-)(AS)[h][p][menu only]</description>
+		<rom name="110 in 1 (19xx)(-)(AS)[h][p][menu only].nes" size="24592" crc="4ccd6a7d" md5="0b9f32fda0f09dea2eec390c083ffcd5" sha1="4e039f75345a2bda53d5133cee976bf6c4c3a957"/>
+	</game>
+	<game name="Tecmo Super Bowl - WCTA Season 2 Round 01 (2003)(World Championship Tecmo Association)(US)[h][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl - WCTA Season 2 Round 01 (2003)(World Championship Tecmo Association)(US)[h][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl - WCTA Season 2 Round 01 (2003)(World Championship Tecmo Association)(US)[h][Tecmo Super Bowl].nes" size="393232" crc="3efdf950" md5="723d490497f68d7d66f5e2fa297f66d9" sha1="825293efa23e3c4fbd8a85df4bee0c4a4f17a185"/>
+	</game>
+	<game name="Tecmo Super Bowl - TWL Season 1 Week 00 - PreSeason (200x)(TecmoWorld League)(US)[h12][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl - TWL Season 1 Week 00 - PreSeason (200x)(TecmoWorld League)(US)[h12][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl - TWL Season 1 Week 00 - PreSeason (200x)(TecmoWorld League)(US)[h12][Tecmo Super Bowl].nes" size="393232" crc="33f82cad" md5="5fa3522446f0b61e5e9bfd0633b43e31" sha1="e8b2de6a00a77213629b92e84c4b37a9ee4bf601"/>
+	</game>
+	<game name="Tecmo Super Bowl 2006-2007 PreSeason (2006)(Lu)(US)[h2][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl 2006-2007 PreSeason (2006)(Lu)(US)[h2][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl 2006-2007 PreSeason (2006)(Lu)(US)[h2][Tecmo Super Bowl].nes" size="393232" crc="474f12fa" md5="1ded95611849d359125b8d5a61339dda" sha1="466eb9009e4d392365a44514ee67d92192f8962b"/>
+	</game>
+	<game name="Rush 'n Attack (1987-04)(Konami)(US)[h][tr][invulnerability, trans v.20030409]">
+		<description>Rush 'n Attack (1987-04)(Konami)(US)[h][tr][invulnerability, trans v.20030409]</description>
+		<rom name="Rush 'n Attack (1987-04)(Konami)(US)[h][tr][invulnerability, trans v.20030409].nes" size="131088" crc="fe7566c1" md5="105e961f20c01ba33e50fe651632f366" sha1="dc7e62e1d8f96c803ec3de6741ff29da6aca5da7"/>
+	</game>
+	<game name="Saint Seiya - Ougon Densetsu Kanketsu Hen (1988-05-31)(Bandai)(JP)[tr zh dwt_so][v0.01-20030109]">
+		<description>Saint Seiya - Ougon Densetsu Kanketsu Hen (1988-05-31)(Bandai)(JP)[tr zh dwt_so][v0.01-20030109]</description>
+		<rom name="Saint Seiya - Ougon Densetsu Kanketsu Hen (1988-05-31)(Bandai)(JP)[tr zh dwt_so][v0.01-20030109].nes" size="262160" crc="07dbae8d" md5="3a3c572a68ab6b1093da3fbb24a564fb" sha1="7334940519fbdf08eab29d6ece74b38d3eeee9b1"/>
+	</game>
+	<game name="Tecmo Super Bowl - WTL Season 8 Week 07 (200x)(World Tecmo League)(US)[h][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl - WTL Season 8 Week 07 (200x)(World Tecmo League)(US)[h][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl - WTL Season 8 Week 07 (200x)(World Tecmo League)(US)[h][Tecmo Super Bowl].nes" size="393236" crc="ad54883f" md5="a897784309a792057938f5d8b27445dc" sha1="b7006b450bb427199aeb867784b6195511a845d3"/>
+	</game>
+	<game name="1942 (1985-12-11)(Capcom)(JP-US)">
+		<description>1942 (1985-12-11)(Capcom)(JP-US)</description>
+		<rom name="1942 (1985-12-11)(Capcom)(JP-US).nes" size="40976" crc="e9cf747f" md5="4f90905fd77c1c9456bd5dfe1ceddc34" sha1="dfb068f72e9eb44e8dbdb181c235da6ccf6fb4bc"/>
 	</game>
 	<game name="Tao of 007 Rev PRG0, The (2002)(Quietust)[p]">
 		<description>Tao of 007 Rev PRG0, The (2002)(Quietust)[p]</description>
@@ -72,7 +128,24 @@
 		<description>Dezaemon DD Rev 199802xx (1998)(Athena)(JP)(en-ja)(proto)[b missing system area][req Dezaemon 3D]</description>
 		<rom name="Dezaemon DD Rev 199802xx (1998)(Athena)(JP)(en-ja)(proto)[b missing system area][req Dezaemon 3D].ndd" size="64458560" crc="ccb84a39" md5="99a67674130f271f150db75c02d14f0a" sha1="d5cc4ab1fc79e27e54a9ad08c4dee47256352006"/>
 	</game>
-	<game name="Animal Crossing - Wild World (demo-kiosk) (2006)(Nintendo)(EU)(M5)">
+	<game name="Detana!! TwinBee (1991-12-06)(Konami)(JP)(Disk 1 of 2)">
+		<description>Detana!! TwinBee (1991-12-06)(Konami)(JP)(Disk 1 of 2)</description>
+		<rom name="Detana!! TwinBee[X68000](1of2)00.0.raw" size="370096" crc="99acc612" md5="6e17530b8f695947f58273a1ae05d983" sha1="ce861e0aa66d6279d9b53bb478114f80340e3b7a"/>
+		<rom name="Detana!! TwinBee[X68000](1of2)00.1.raw" size="423383" crc="64b80dec" md5="516371e5d750de57dcf58eb49cddc04d" sha1="430bddcb488d6d66d509a836ef965c281b6d812b"/>
+		<rom name="Detana!! TwinBee[X68000](1of2)01.0.raw" size="390105" crc="9724508f" md5="b5fe661d2810954a43ee3b1d4eb465a6" sha1="11d7b1ea8625750ce6471198503e7db4ebe152b7"/>
+	</game>
+	<game name="Infiltrator (1986)(Mindscape)(GB)[3.5DD]">
+		<description>Infiltrator (1986)(Mindscape)(GB)[3.5DD]</description>
+		<rom name="Infiltrator[PC](1of1)00.0.raw" size="231810" crc="66e59bce" md5="93c19deef3565e6ff63b0e44e835fa1d" sha1="088bce88fde1504ce19bf7c4c1893d757df4b731"/>
+		<rom name="Infiltrator[PC](1of1)00.1.raw" size="218085" crc="81a93281" md5="081046755032a2dc5dbdab092f40b17c" sha1="b34b302196bbd102590eeecaabe04fd62627fef3"/>
+		<rom name="Infiltrator[PC](1of1)01.0.raw" size="192105" crc="8977cde6" md5="5ed65b8cdd99affd1c6397d2aad0058b" sha1="34b29bb474cbed8555f662d267ab75d4ecdd1a3d"/>
+	</game>
+	<game name="Space Quest II - Chapter II - Vohaul's Revenge v2.0F (1989)(Sierra On-Line)(Disk 1 of 2)[3.5''][cp][Interp. 2.936][sn 3129289101202698]">
+		<description>Space Quest II - Chapter II - Vohaul's Revenge v2.0F (1989)(Sierra On-Line)(Disk 1 of 2)[3.5''][cp][Interp. 2.936][sn 3129289101202698]</description>
+		<rom name="Space Quest II[MS-DOS](1of2)00.0.raw" size="233324" crc="286ad82a" md5="ef84044cd9e6c22d35af7d22e4c2ff25" sha1="f354f552aebe2906b18db4238cb37d3ebea8caf8"/>
+		<rom name="Space Quest II[MS-DOS](1of2)00.1.raw" size="220210" crc="f49b6fd1" md5="e46cb7324424f53e3fb4089d88b3d97e" sha1="5c7b26ba4b9b44ce81ad60c431e02f18333c4e96"/>
+	</game>
+	<game name="Animal Crossing - Wild World (demo-kiosk) (2006)(Nintendo)(EU)(m5)">
 		<description>Animal Crossing - Wild World (demo-kiosk) (2006)(Nintendo)(EU)(M5)</description>
 		<rom name="Animal Crossing - Wild World (demo-kiosk) (2006)(Nintendo)(EU)(M5).nds" size="67108864" crc="47782d9b" md5="93632bd45e2e2b5938ff86059b61bc2d" sha1="0c6d9cc5c34d80fb6f373b53f5c2a190a46e1219"/>
 	</game>
