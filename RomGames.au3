@@ -168,11 +168,9 @@ Func Start()
 		Local $aRows = ArrayOfFileContents($sFile)
 		For $sRow In $aRows
 			Local $isEndOfGameTitle = False
-			;ConsoleLog('==================================')
-			;ConsoleLog('new row')
 
 			Select
-				Case Not $isHeaderDataLoaded And $sRow = ''
+				Case $sRow = ''
 					; do nothing
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, '<?xml version')
 					; do nothing
@@ -218,11 +216,10 @@ Func Start()
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, '</header>')
 					$isHeaderDataLoaded = True
 
+				; parse "game name" row
 				Case StringInStr($sRow, $aDBKeyValue[$iTitle][$iDbDelLeft])
-					;ConsoleLog('===========================================')
 					$aDBKeyValue[$iTitle][$iDbValue] = FixFormatting(RestoreGameTitle(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iTitle][$iDbDelLeft], $aDBKeyValue[$iTitle][$iDbDelRight])))
 					$aDBKeyValue[$iGame_Name][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iGame_Name][$iDbDelLeft], $aDBKeyValue[$iGame_Name][$iDbDelRight])
-					;Local $isIgnoredFound = False
 					Local $isRevFound = False
 					Local $isDemoFound = False
 					Local $isDateFound = False
@@ -269,18 +266,11 @@ Func Start()
 								$isVideoFound = True
 								$aDBKeyValue[$iVideo][$iDbValue] = $sValue
 
-							;Case Not $isCountryFound And CheckResourceFile($sValue, $afCodeCountry) Or StringRegExp($sValue, '(?i)((Europe|Japan|USA|JP|US|EU)(\,|\-))')
-							Case Not $isCountryFound And CheckRegexFile($sValue, '^(?i)', $afCodeCountry, '(-.*?|,\s.*?)?$')
-								;Or StringRegExp($sValue, '(?i)((Europe|Japan|USA|JP|US|EU)(\,|\-))')
-
-								;($sValue, '^' & $aRow[$r] & '(-.*?|,\s.*?)$')
+							Case Not $isCountryFound And RegexOnResourceFile($sValue, '^(?i)', $afCodeCountry, '(-.*?|,\s.*?)?$')
 								$isCountryFound = True
 								$aDBKeyValue[$iCountry][$iDbValue] = $sValue
 
-							;Case Not $isLanguageFound And CheckResourceFile($sValue, $afLanguage) Or StringRegExp($sValue, '(?i)M\d+') Or StringRegExp($sValue, '\b([A-Z][a-z](\-|\,))([A-Z][a-z](\-|\,)?)\b') Or StringRegExp($sValue, '\b([a-z][a-z](\-|\,))([a-z][a-z](\-|\,)?)\b')
-							Case Not $isLanguageFound And CheckRegexFile($sValue, '^(?i)', $afLanguage, '(\-.*?|\,.*?)?$') Or StringRegExp($sValue, '(?i)M\d+')
-								;Or StringRegExp($sValue, '(?i)M\d+') Or StringRegExp($sValue, '\b([A-Z][a-z](\-|\,))([A-Z][a-z](\-|\,)?)\b') Or StringRegExp($sValue, '\b([a-z][a-z](\-|\,))([a-z][a-z](\-|\,)?)\b')
-
+							Case Not $isLanguageFound And RegexOnResourceFile($sValue, '^(?i)', $afLanguage, '(\-.*?|\,.*?)?$') Or StringRegExp($sValue, '(?i)M\d+')
 								$isLanguageFound = True
 								$aDBKeyValue[$iLanguage][$iDbValue] = $sValue
 
@@ -306,6 +296,41 @@ Func Start()
 
 						EndSelect
 					Next
+
+					; [cr#] 												- [cr] Cracked
+					; [cr Cracker] 											- [cr] Cracked - Cracked by Cracker (group or person)
+					; [f#] 													- [f] Fixed - A fixed game has been altered in some way so that it will run better on a copier or emulator.
+					; [f Fix] 												- [f] Fixed - Fix/amendment added
+					; [f Fixer] 											- [f] Fixed - Fixed by Fixer (group or person)
+					; [f Fix Fixer] 										- [f] Fixed - Fix added by Fixer (group or person)
+					; [h#]													- [h] Hack - Something in this ROM is not quite as it should be. Often a hacked ROM simply has a changed header or has been enabled to run in different regions. Other times it could be a release group intro, or just some kind of cheating or funny hack.
+					; [h Hack] 												– [h] Hack - Description of hack
+					; [h Hacker] 											– [h] Hack - Hacked by (group or person)
+					; [h Hack Hacker] 										– [h] Hack - Description of hack, followed by hacker (group or person)
+					; [m#]													- [m] Modified
+					; [m Modification]  									- [m] Modified - Modification added
+					; [p#] 													- [p] Pirate
+					; [p Pirate] 											- [p] Pirate - Pirate version by Pirate (group or person)
+					; [t#] 													- [t] Trained - Special code which executes before the game is begun. It allows you to access cheats from a menu.
+					; [t Trainer] 											- [t] Trained - Trained by trainer (group or person)
+					; [t +x] 												- [t] Trained - x denotes number of trainers added
+					; [t +x Trainer] 										- [t] Trained - Trained and x number of trainers added by trainer (group or person)
+					; [tr#] 												- [tr] Translated
+					; [tr language] 										- [tr] Translated - to Language
+					; [tr language-partial] 								- [tr] Translated - to Language (partial translation)
+					; [tr language Translator] 								- [tr] Translated - to Language by Translator (group or person)
+					; [tr language1-language2] 								- [tr] Translated - to both Language1 and Language2.
+					; [tr language1-partial-language2-partial Translator] 	- [tr] Translated - Partially translated to both Language1 and language2 by Translator (group or person).
+					; [o#] 													- [o] Over Dump - ROM image has more data than is actually in the cart. The extra information means nothing and is removed from the true image.
+					; [u#]													- [u] Under Dumped - (not enough data dumped)
+					; [v]													- [v] Virus - (infected)
+					; [v Virus] 											- [v] Virus - Infected with virus
+					; [v Virus Version] 									- [v] Virus - Infected with virus of version
+					; [b#] 													- [b] Bad Dump - often occurs with an older game or a faulty dumper (bad connection). Another common source of [b] ROMs is a corrupted upload to a release FTP.
+					; [b Descriptor] 										- [b] Bad Dump - Bad dump (including reason)
+					; [a#]													- [a] Alternate - This is simply an alternate version of a ROM. Many games have been re-released to fix bugs or even to eliminate Game Genie codes (Yes, Nintendo hates that device).
+					; [a Descriptor]										- [a] Alternate - (including reason)
+					; [!]													- [!] Verified Good Dump
 
 					; Rom Flags [cr][f][h][m][p][t][tr][o][u][v][b][a][!][more info]
 					;Local $isIgnoreFlags = False
@@ -339,31 +364,31 @@ Func Start()
 							Case Not $isAlternate And StringRegExp($sValue, '^(Rev|Rev\s.*?)$')
 								; do nothing
 
-							Case Not $isCracked And StringRegExp($sValue, '^(cr|cr\d+|cr\s.*?)$')
+							Case Not $isCracked And StringRegExp($sValue, '^(cr|cr\d+|cr\s.*?|cr\d\s.*?)$')
 								$isCracked = True
 								$aDBKeyValue[$iCracked][$iDbValue] = $sValue
 
-							Case Not $isFixed And StringRegExp($sValue, '^(f|f\d+|f\s.*?)$')
+							Case Not $isFixed And StringRegExp($sValue, '^(f|f\d+|f\s.*?|f\d\s.*?)$')
 								$isFixed = True
 								$aDBKeyValue[$iFixed][$iDbValue] = $sValue
 
-							Case Not $isHack And StringRegExp($sValue, '^(h|h\d+|h\s.*?)$')
+							Case Not $isHack And StringRegExp($sValue, '^(h|h\d+|h\s.*?|h\d\s.*?)$')
 								$isHack = True
 								$aDBKeyValue[$iHack][$iDbValue] = $sValue
 
-							Case Not $isModified And StringRegExp($sValue, '^(m|m\d+|m\s.*?)$')
+							Case Not $isModified And StringRegExp($sValue, '^(m|m\d+|m\s.*?|m\d\s.*?)$')
 								$isModified = True
 								$aDBKeyValue[$iModified][$iDbValue] = $sValue
 
-							Case Not $isPirate And StringRegExp($sValue, '^(p|p\d+|p\s.*?)$')
+							Case Not $isPirate And StringRegExp($sValue, '^(p|p\d+|p\s.*?|p\d\s.*?)$')
 								$isPirate = True
 								$aDBKeyValue[$iPirate][$iDbValue] = $sValue
 
-							Case Not $isTrained And StringRegExp($sValue, '^(t|t\d+|t\s.*?)$')
+							Case Not $isTrained And StringRegExp($sValue, '^(t|t\d+|t\s.*?|t\d\s.*?)$')
 								$isTrained = True
 								$aDBKeyValue[$iTrained][$iDbValue] = $sValue
 
-							Case Not $isTranslated And StringRegExp($sValue, '^(tr|tr\d+|tr\s.*?)$')
+							Case Not $isTranslated And StringRegExp($sValue, '^(tr|tr\d+|tr\s.*?|tr\d\s.*?)$')
 								$isTranslated = True
 								$aDBKeyValue[$iTranslated][$iDbValue] = $sValue
 
@@ -375,15 +400,16 @@ Func Start()
 								$isUnderDumped = True
 								$aDBKeyValue[$iUnderDumped][$iDbValue] = $sValue
 
-							Case Not $isVirus And StringRegExp($sValue, '^(v|v\d+|v\s.*?)$')
-								$isVirus = True
-								$aDBKeyValue[$iVirus][$iDbValue] = $sValue
+							; don't think anyone uses this flag
+							;Case Not $isVirus And StringRegExp($sValue, '^(v|v\d+|v\s.*?|v\d\s.*?)$')
+								;$isVirus = True
+								;$aDBKeyValue[$iVirus][$iDbValue] = $sValue
 
-							Case Not $isBadDump And StringRegExp($sValue, '^(b|b\d+|b\s.*?)$')
+							Case Not $isBadDump And StringRegExp($sValue, '^(b|b\d+|b\s.*?|b\d\s.*?)$')
 								$isBadDump = True
 								$aDBKeyValue[$iBadDump][$iDbValue] = $sValue
 
-							Case Not $isAlternate And StringRegExp($sValue, '^(a|a\d+|a\s.*?)$')
+							Case Not $isAlternate And StringRegExp($sValue, '^(a|a\d+|a\s.*?|a\d\s.*?)$')
 								$isAlternate = True
 								$aDBKeyValue[$iAlternate][$iDbValue] = $sValue
 
@@ -391,68 +417,38 @@ Func Start()
 								$isVerified = True
 								$aDBKeyValue[$iVerified][$iDbValue] = $sValue
 
-							; [cr#] 												- [cr] Cracked
-							; [cr Cracker] 											- [cr] Cracked - Cracked by Cracker (group or person)
-							; [f#] 													- [f] Fixed - A fixed game has been altered in some way so that it will run better on a copier or emulator.
-							; [f Fix] 												- [f] Fixed - Fix/amendment added
-							; [f Fixer] 											- [f] Fixed - Fixed by Fixer (group or person)
-							; [f Fix Fixer] 										- [f] Fixed - Fix added by Fixer (group or person)
-							; [h#]													- [h] Hack - Something in this ROM is not quite as it should be. Often a hacked ROM simply has a changed header or has been enabled to run in different regions. Other times it could be a release group intro, or just some kind of cheating or funny hack.
-							; [h Hack] 												– [h] Hack - Description of hack
-							; [h Hacker] 											– [h] Hack - Hacked by (group or person)
-							; [h Hack Hacker] 										– [h] Hack - Description of hack, followed by hacker (group or person)
-							; [m#]													- [m] Modified
-							; [m Modification]  									- [m] Modified - Modification added
-							; [p#] 													- [p] Pirate
-							; [p Pirate] 											- [p] Pirate - Pirate version by Pirate (group or person)
-							; [t#] 													- [t] Trained - Special code which executes before the game is begun. It allows you to access cheats from a menu.
-							; [t Trainer] 											- [t] Trained - Trained by trainer (group or person)
-							; [t +x] 												- [t] Trained - x denotes number of trainers added
-							; [t +x Trainer] 										- [t] Trained - Trained and x number of trainers added by trainer (group or person)
-							; [tr#] 												- [tr] Translated
-							; [tr language] 										- [tr] Translated - to Language
-							; [tr language-partial] 								- [tr] Translated - to Language (partial translation)
-							; [tr language Translator] 								- [tr] Translated - to Language by Translator (group or person)
-							; [tr language1-language2] 								- [tr] Translated - to both Language1 and Language2.
-							; [tr language1-partial-language2-partial Translator] 	- [tr] Translated - Partially translated to both Language1 and language2 by Translator (group or person).
-							; [o#] 													- [o] Over Dump - ROM image has more data than is actually in the cart. The extra information means nothing and is removed from the true image.
-							; [u#]													- [u] Under Dumped - (not enough data dumped)
-							; [v]													- [v] Virus - (infected)
-							; [v Virus] 											- [v] Virus - Infected with virus
-							; [v Virus Version] 									- [v] Virus - Infected with virus of version
-							; [b#] 													- [b] Bad Dump - often occurs with an older game or a faulty dumper (bad connection). Another common source of [b] ROMs is a corrupted upload to a release FTP.
-							; [b Descriptor] 										- [b] Bad Dump - Bad dump (including reason)
-							; [a#]													- [a] Alternate - This is simply an alternate version of a ROM. Many games have been re-released to fix bugs or even to eliminate Game Genie codes (Yes, Nintendo hates that device).
-							; [a Descriptor]										- [a] Alternate - (including reason)
-							; [!]													- [!] Verified Good Dump
-
-
 							Case Else
-								consoleLog('WARN   ROM-FLAG not found: >' & $sValue & '< ' & '  ' & $sRow)
+								;consoleLog('WARN   ROM-FLAG not found: >' & $sValue & '< ' & '  ' & $sRow)
+								;MsgBox($MB_SYSTEMMODAL, 'Nothing Matched: ', '>' & $_sOtherValue & '<')
 								If $isMoreInfo Then
 									$aDBKeyValue[$iMoreInfo][$iDbValue] = $aDBKeyValue[$iMoreInfo][$iDbValue] & ':' & $sValue
 								Else
 									$aDBKeyValue[$iMoreInfo][$iDbValue] = $aDBKeyValue[$iMoreInfo][$iDbValue] & $sValue
 								EndIf
-								;MsgBox($MB_SYSTEMMODAL, 'Nothing Matched: ', '>' & $_sOtherValue & '<')
+								; flip bool after first find
 								$isMoreInfo = True
 
 						EndSelect
 					Next
 
+					; get "Rev #"
 					$aDBKeyValue[$iRev][$iDbValue] = GetRevNumber(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRev][$iDbDelLeft], $aDBKeyValue[$iRev][$iDbDelRight]))
-					$aDBKeyValue[$iCloneof][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iCloneof][$iDbDelLeft], $aDBKeyValue[$iCloneof][$iDbDelRight])
-					;Local $aDelRight = StringSplit($sRow, '<game name="', $STR_ENTIRESPLIT + $STR_NOCOUNT)
 
+					; get clone
+					$aDBKeyValue[$iCloneof][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iCloneof][$iDbDelLeft], $aDBKeyValue[$iCloneof][$iDbDelRight])
+
+				; parse description row
 				Case StringInStr($sRow, $aDBKeyValue[$iDescription][$iDbDelLeft])
 					$aDBKeyValue[$iDescription][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iDescription][$iDbDelLeft], $aDBKeyValue[$iDescription][$iDbDelRight])
 
+				; parse "release name" row
 				Case StringInStr($sRow, $aDBKeyValue[$iRelease_Name][$iDbDelLeft])
 					$aDBKeyValue[$iRelease_Name][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRelease_Name][$iDbDelLeft], $aDBKeyValue[$iRelease_Name][$iDbDelRight])
 
 					; TODO add multi regoin rows
 					$aDBKeyValue[$iRegion][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRegion][$iDbDelLeft], $aDBKeyValue[$iRegion][$iDbDelRight])
 
+				; parse "rom name" row
 				Case StringInStr($sRow, '<rom name=')
 					Local $rom_name = GetStringBetweenTwoDelimiters($sRow, '<rom name="', '"')
 					Local $media_type = AppendToNonEmpty(GetStringBetweenTwoDelimiters($sRow, '1of', ')'), '1 of ')
@@ -466,20 +462,23 @@ Func Start()
 					; rom_name can have multiple rows for givin title
 					_ArrayAdd($aRomName, $rom_name & ':' & $media_type & ':' & $file_type & ':' & $size & ':' & $crc & ':' & $md5 & ':' & $sha1 & ':' & $status, $ARRAYFILL_FORCE_SINGLEITEM)
 
+				; check end of single game title
 				Case StringInStr($sRow, '</game>')
 					$isEndOfGameTitle = True
 
+				; End of File
 				Case StringInStr($sRow, '</datafile>')
-					;End of File
+					; do nothing
 
+				; log if row didn't match any above filters
 				Case Else
 					Local $sMoreInfo = 'WARN: unknown row data: >' & $sRow & '<'
 					ConsoleLog($sMoreInfo)
 
 			EndSelect
 
+			; save data after all rows for a title have been parsed.
 			If $isEndOfGameTitle Then
-				; save game data after all rows have been parsed
 				For $sRom In $aRomName
 					Local $aValue = StringSplit($sRom, ':', $STR_ENTIRESPLIT + $STR_NOCOUNT)
 					$aDBKeyValue[$iRom_Name][$iDbValue]   = $aValue[0]
@@ -512,7 +511,7 @@ EndFunc
 ; *************************************************
 ;
 ; *************************************************
-Func CheckRegexFile($sValue, $sReg1, $aFile, $sReg2)
+Func RegexOnResourceFile($sValue, $sReg1, $aFile, $sReg2)
 	;ConsoleLog('================')
 	;ConsoleLog(UBound($aFile))
 	;ConsoleLog($aFile)
@@ -703,7 +702,7 @@ Func RestoreGameTitle($string)
 		EndIf
 	Next
 
-	; Remove "Rev #" from game title
+	; Remove "Rev #" from end of game title
 	If StringInStr($stringNew, ' Rev ') Then
 		Local $aSplit = StringSplit($stringNew, ' Rev ', $STR_ENTIRESPLIT + $STR_NOCOUNT)
 		If UBound($aSplit) > 0 Then
