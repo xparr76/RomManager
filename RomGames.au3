@@ -4,6 +4,7 @@
 #include <File.au3>
 #include <MsgBoxConstants.au3>
 
+
 ; Title version (demo) (date)(publisher)(system)(video)(country)(language)(copyright)(devstatus)(media type)(media label)[cr][f][h][m][p][t][tr][o][u][v][b][a][!][more info]
 ; ---------------------------
 ; ---------- Start ----------
@@ -150,8 +151,6 @@ Local $iDBHeaderDataEnd = 50
 Start()
 Func Start()
 	$hDB = StartDB($sDBFile, $aDBKeyValue)
-	ConsoleLog($aDBKeyValue)
-
 
 	; capture files
 	Local $aRomFiles = ArrayOfFilesFromPath($sDatFolder)
@@ -160,7 +159,6 @@ Func Start()
 	For $sFile In $aRomFiles
 		ConsoleLog('new file')
 		Local $isHeaderDataLoaded = False
-		;Local $isGameDataLoaded = False
 		Local $aRomName[0]
 		ConsoleLog($aRomName)
 
@@ -181,45 +179,45 @@ Func Start()
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, '<header>')
 					; do nothing
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_name][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_name][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_name][$iDbDelLeft], $aDBKeyValue[$iHeader_name][$iDbDelRight])
+					$aDBKeyValue[$iHeader_name][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_name][$iDbDelLeft], $aDBKeyValue[$iHeader_name][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_description][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_description][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_description][$iDbDelLeft], $aDBKeyValue[$iHeader_description][$iDbDelRight])
+					$aDBKeyValue[$iHeader_description][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_description][$iDbDelLeft], $aDBKeyValue[$iHeader_description][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_category][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_category][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_category][$iDbDelLeft], $aDBKeyValue[$iHeader_category][$iDbDelRight])
+					$aDBKeyValue[$iHeader_category][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_category][$iDbDelLeft], $aDBKeyValue[$iHeader_category][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_clrmamepro][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_clrmamepro][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_clrmamepro][$iDbDelLeft], $aDBKeyValue[$iHeader_clrmamepro][$iDbDelRight])
+					$aDBKeyValue[$iHeader_clrmamepro][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_clrmamepro][$iDbDelLeft], $aDBKeyValue[$iHeader_clrmamepro][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_romcenter_plugin][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_romcenter_plugin][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_romcenter_plugin][$iDbDelLeft], $aDBKeyValue[$iHeader_romcenter_plugin][$iDbDelRight])
+					$aDBKeyValue[$iHeader_romcenter_plugin][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_romcenter_plugin][$iDbDelLeft], $aDBKeyValue[$iHeader_romcenter_plugin][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_version][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_version][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_version][$iDbDelLeft], $aDBKeyValue[$iHeader_version][$iDbDelRight])
+					$aDBKeyValue[$iHeader_version][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_version][$iDbDelLeft], $aDBKeyValue[$iHeader_version][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_date][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_date][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_date][$iDbDelLeft], $aDBKeyValue[$iHeader_date][$iDbDelRight])
+					$aDBKeyValue[$iHeader_date][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_date][$iDbDelLeft], $aDBKeyValue[$iHeader_date][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_author][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_author][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_author][$iDbDelLeft], $aDBKeyValue[$iHeader_author][$iDbDelRight])
+					$aDBKeyValue[$iHeader_author][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_author][$iDbDelLeft], $aDBKeyValue[$iHeader_author][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_email][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_email][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_email][$iDbDelLeft], $aDBKeyValue[$iHeader_email][$iDbDelRight])
+					$aDBKeyValue[$iHeader_email][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_email][$iDbDelLeft], $aDBKeyValue[$iHeader_email][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_homepage][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_homepage][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_homepage][$iDbDelLeft], $aDBKeyValue[$iHeader_homepage][$iDbDelRight])
+					$aDBKeyValue[$iHeader_homepage][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_homepage][$iDbDelLeft], $aDBKeyValue[$iHeader_homepage][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, $aDBKeyValue[$iHeader_url][$iDbDelLeft])
-					$aDBKeyValue[$iHeader_url][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_url][$iDbDelLeft], $aDBKeyValue[$iHeader_url][$iDbDelRight])
+					$aDBKeyValue[$iHeader_url][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iHeader_url][$iDbDelLeft], $aDBKeyValue[$iHeader_url][$iDbDelRight]))
 
 				Case Not $isHeaderDataLoaded And StringInStr($sRow, '</header>')
 					$isHeaderDataLoaded = True
 
 				; parse "game name" row
 				Case StringInStr($sRow, $aDBKeyValue[$iTitle][$iDbDelLeft])
-					$aDBKeyValue[$iTitle][$iDbValue] = FixFormatting(RestoreGameTitle(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iTitle][$iDbDelLeft], $aDBKeyValue[$iTitle][$iDbDelRight])))
-					$aDBKeyValue[$iGame_Name][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iGame_Name][$iDbDelLeft], $aDBKeyValue[$iGame_Name][$iDbDelRight])
+					$aDBKeyValue[$iTitle][$iDbValue] = Formatting(RestoreGameTitle(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iTitle][$iDbDelLeft], $aDBKeyValue[$iTitle][$iDbDelRight])))
+					$aDBKeyValue[$iGame_Name][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iGame_Name][$iDbDelLeft], $aDBKeyValue[$iGame_Name][$iDbDelRight]))
 					Local $isRevFound = False
 					Local $isDemoFound = False
 					Local $isDateFound = False
@@ -232,6 +230,7 @@ Func Start()
 					Local $isDevStatusFound = False
 					Local $isMediaTypeFound = False
 					Local $isMediaLabelFound = False
+					Local $isMoreInfo = False
 
 					; Title version (demo) (date)(publisher)(system)(video)(country)(language)(copyright)(devstatus)(media type)(media label)
 					Local $gameName = GetStringBetweenTwoDelimiters($sRow, '<game name="', '"')
@@ -250,27 +249,30 @@ Func Start()
 								$isDemoFound = True
 								$aDBKeyValue[$iDemo][$iDbValue] = $sValue
 
-							Case Not $isDateFound And StringRegExp($sValue, '^(19|20)\d\d|19xx|198x|199x|20xx|200x')
+							Case Not $isDateFound And StringRegExp($sValue, '^((\d+(\/|-|,|.)\d+)|(\d+(\/|-|,|.)\d+(\/|-|,|.)\d+)|((January|February|March|April|May|June|July|August|September|October|November|December)(\/|-|,|.)?(\s+)?(\d+)?)|((Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(\/|-|,|.)?(\s+)?(\d+)?)|19xx|198x|199x|20xx|200x)$')
 								$isDateFound = True
 								$aDBKeyValue[$iDate][$iDbValue] = $sValue
 
-							Case Not $isPublisherFound And CheckResourceFile($sValue, $afPublisher)
+							;Case Not $isPublisherFound And CheckResourceFile($sValue, $afPublisher)
+							Case Not $isPublisherFound And RegexOnResourceFile($sValue, '^(?-i)(?!PAL)(?i)', $afPublisher, '$')
 								$isPublisherFound = True
 								$aDBKeyValue[$iPublisher][$iDbValue] = $sValue
 
-							Case Not $isSystemFound And CheckResourceFile($sValue, $afSystem)
+							;Case Not $isSystemFound And CheckResourceFile($sValue, $afSystem)
+							Case Not $isSystemFound And RegexOnResourceFile($sValue, '^(?i)', $afSystem, '$')
 								$isSystemFound = True
 								$aDBKeyValue[$iSystem][$iDbValue] = $sValue
 
-							Case Not $isVideoFound And CheckResourceFile($sValue, $afCodeVideo)
+							;Case Not $isVideoFound And CheckResourceFile($sValue, $afCodeVideo)
+							Case Not $isVideoFound And StringRegExp($sValue, '^(?i)((CGA|EGA|HGC|MCGA|MDA|NTSC|PAL|SECAM|SVGA|VGA|XGA)(_|-|\.|\s+)?(J|M|U|PAL|B|D|I|N|NC|60|NTSC)?)$')
 								$isVideoFound = True
 								$aDBKeyValue[$iVideo][$iDbValue] = $sValue
 
-							Case Not $isCountryFound And RegexOnResourceFile($sValue, '^(?i)', $afCodeCountry, '(-.*?|,\s.*?)?$')
+							Case Not $isCountryFound And RegexOnResourceFile($sValue, '^(?i)', $afCodeCountry, '(\+.*?|-.*?|,\s.*?)?$')
 								$isCountryFound = True
 								$aDBKeyValue[$iCountry][$iDbValue] = $sValue
 
-							Case Not $isLanguageFound And RegexOnResourceFile($sValue, '^(?i)', $afLanguage, '(\-.*?|\,.*?)?$') Or StringRegExp($sValue, '(?i)M\d+')
+							Case Not $isLanguageFound And RegexOnResourceFile($sValue, '^(?i)', $afLanguage, '(\+.*?|\-.*?|\,.*?)?$') Or StringRegExp($sValue, '(?i)M\d+')
 								$isLanguageFound = True
 								$aDBKeyValue[$iLanguage][$iDbValue] = $sValue
 
@@ -278,7 +280,8 @@ Func Start()
 								$isCopyrightFound = True
 								$aDBKeyValue[$iCopyright][$iDbValue] = $sValue
 
-							Case Not $isDevStatusFound And CheckResourceFile($sValue, $afDevStatus) Or StringRegExp($sValue, '(?i)(Proto\s\d|Beta\s\d)')
+							;Case Not $isDevStatusFound And CheckResourceFile($sValue, $afDevStatus) Or StringRegExp($sValue, '(?i)(Proto\s\d|Beta\s\d)')
+							Case Not $isDevStatusFound And StringRegExp($sValue, '^(?i)(alpha|beta|preview|pre(_|-|\.|\s+)release|proto)(\s\d+)?$')
 								$isDevStatusFound = True
 								$aDBKeyValue[$iDevStatus][$iDbValue] = $sValue
 
@@ -293,6 +296,13 @@ Func Start()
 							Case Else
 								consoleLog('WARN  no match found: >' & $sValue & '< ' & '  ' & $sRow)
 								;MsgBox($MB_SYSTEMMODAL, 'Nothing Matched: ', '>' & $_sOtherValue & '<')
+								If $isMoreInfo Then
+									$aDBKeyValue[$iMoreInfo][$iDbValue] = $aDBKeyValue[$iMoreInfo][$iDbValue] & '::' & $sValue
+								Else
+									$aDBKeyValue[$iMoreInfo][$iDbValue] = $aDBKeyValue[$iMoreInfo][$iDbValue] & $sValue
+								EndIf
+								; flip bool after first find
+								$isMoreInfo = True
 
 						EndSelect
 					Next
@@ -347,7 +357,7 @@ Func Start()
 					Local $isBadDump = False
 					Local $isAlternate = False
 					Local $isVerified = False
-					Local $isMoreInfo = False
+					$isMoreInfo = False
 
 					; split title on )
 					Local $aRomFlagSplit = StringSplit($gameName, ')', $STR_ENTIRESPLIT + $STR_NOCOUNT)
@@ -432,28 +442,32 @@ Func Start()
 					Next
 
 					; get "Rev #"
-					$aDBKeyValue[$iRev][$iDbValue] = GetRevNumber(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRev][$iDbDelLeft], $aDBKeyValue[$iRev][$iDbDelRight]))
+					$aDBKeyValue[$iRev][$iDbValue] = Formatting(GetRevNumber(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRev][$iDbDelLeft], $aDBKeyValue[$iRev][$iDbDelRight])))
 
 					; get clone
-					$aDBKeyValue[$iCloneof][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iCloneof][$iDbDelLeft], $aDBKeyValue[$iCloneof][$iDbDelRight])
+					$aDBKeyValue[$iCloneof][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iCloneof][$iDbDelLeft], $aDBKeyValue[$iCloneof][$iDbDelRight]))
 
 				; parse description row
 				Case StringInStr($sRow, $aDBKeyValue[$iDescription][$iDbDelLeft])
-					$aDBKeyValue[$iDescription][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iDescription][$iDbDelLeft], $aDBKeyValue[$iDescription][$iDbDelRight])
+					$aDBKeyValue[$iDescription][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iDescription][$iDbDelLeft], $aDBKeyValue[$iDescription][$iDbDelRight]))
 
 				; parse "release name" row
 				Case StringInStr($sRow, $aDBKeyValue[$iRelease_Name][$iDbDelLeft])
-					$aDBKeyValue[$iRelease_Name][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRelease_Name][$iDbDelLeft], $aDBKeyValue[$iRelease_Name][$iDbDelRight])
+					$aDBKeyValue[$iRelease_Name][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRelease_Name][$iDbDelLeft], $aDBKeyValue[$iRelease_Name][$iDbDelRight]))
 
 					; TODO add multi regoin rows
-					$aDBKeyValue[$iRegion][$iDbValue] = GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRegion][$iDbDelLeft], $aDBKeyValue[$iRegion][$iDbDelRight])
+					$aDBKeyValue[$iRegion][$iDbValue] = Formatting(GetStringBetweenTwoDelimiters($sRow, $aDBKeyValue[$iRegion][$iDbDelLeft], $aDBKeyValue[$iRegion][$iDbDelRight]))
 
 				; parse "rom name" row
 				Case StringInStr($sRow, '<rom name=')
 					Local $rom_name = GetStringBetweenTwoDelimiters($sRow, '<rom name="', '"')
 					Local $media_type = AppendToNonEmpty(GetStringBetweenTwoDelimiters($sRow, '1of', ')'), '1 of ')
-					Local $file_type = StringSplit($rom_name, '.', $STR_ENTIRESPLIT + $STR_NOCOUNT)
-					$file_type = $file_type[UBound($file_type)-1]
+					Local $file_type = ''
+					; get the file type after the "."
+					If StringInStr($rom_name, '.') Then
+						$file_type = StringSplit($rom_name, '.', $STR_ENTIRESPLIT + $STR_NOCOUNT)
+						$file_type = $file_type[UBound($file_type)-1]
+					EndIf
 					Local $size = GetStringBetweenTwoDelimiters($sRow, 'size="', '"')
 					Local $crc = GetStringBetweenTwoDelimiters($sRow, 'crc="', '"')
 					Local $md5 = GetStringBetweenTwoDelimiters($sRow, 'md5="', '"')
@@ -548,7 +562,7 @@ Func CheckResourceFile($string, $aFile)
 		Local $aRow = StringSplit($aFile[$f], '|', $STR_NOCOUNT)
 
 		For $r = 1 to UBound($aRow) - 1
-			IF $string = $aRow[$r] And $string <> ''  And $aRow[$r] <> '' Then
+			IF $string == $aRow[$r] And $string <> ''  And $aRow[$r] <> '' Then
 				Return $aRow[1]
 			EndIf
 		Next
@@ -733,6 +747,17 @@ Func Formatting($string)
 	If StringInStr($string, '&amp;') Then
 		$string = StringReplace($string,'&amp;', '&')
 	EndIf
+
+	; replce illegal character
+	If StringInStr($string, '/') Then $string = StringReplace($string, '/', ' -')
+	If StringInStr($string, '\') Then $string = StringReplace($string, '\', ' -')
+	If StringInStr($string, '?') Then $string = StringReplace($string, '?', ' -')
+	If StringInStr($string, ':') Then $string = StringReplace($string, ':', ' -')
+	If StringInStr($string, '*') Then $string = StringReplace($string, '*', ' -')
+	If StringInStr($string, '"') Then $string = StringReplace($string, '"', ' -')
+	If StringInStr($string, '<') Then $string = StringReplace($string, '<', ' -')
+	If StringInStr($string, '>') Then $string = StringReplace($string, '>', ' -')
+	If StringInStr($string, '|') Then $string = StringReplace($string, '|', ' -')
 
 	; remove "Enter" char 13 from string
 	$string = StringStripCR($string)

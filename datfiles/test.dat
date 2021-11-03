@@ -11,6 +11,90 @@
 		<author>alexian, BitLooter</author>
 		<url>www.no-intro.org</url>
 	</header>
+	<game name="Elder Scrolls Travels, The - Oblivion (USA) (Beta) (09-06-2006)">
+		<description>Elder Scrolls Travels, The - Oblivion (USA) (Beta) (09-06-2006) (1/5 Dump Of "The_Elder_Scrolls_Travels_Oblivion_USA_Beta_XX_XX_200X_PSP-iND" Pack.)</description>
+		<release name="Elder Scrolls Travels, The - Oblivion (USA) (Beta) (09-06-2006)" region="USA"/>
+		<rom name="Elder Scrolls Travels, The - Oblivion (USA) (Beta) (09-06-2006).iso" size="66760704" crc="b00ff299" md5="8960aa74e53a1ea3655b7f74eee72bf0" sha1="144e7291974f520e2876d5a140ff03dad10d4c2a" status="verified"/>
+	</game>
+	<game name="Big Bang Bang (Japan) (Sample) (2003-09-22)">
+		<description>Big Bang Bang (Japan) (Sample) (2003-09-22) (Also known as "Moonball")</description>
+		<rom name="Big Bang Bang (Japan) (Sample) (2003-09-22).iso" size="1605632" crc="9f07cfd9" md5="ab3c6b0874a62bd79fa467bf6559dead" sha1="d0166553d97cca2e9106ff2b4a64b1932afa93b7"/>
+	</game>
+	<game name="2 Games in 1 - Disneys Prinzessinnen + Baerenbrueder (Germany) (De+En,Fr,De,Es,It,Nl,Sv,Da)" cloneof="2 Games in 1 - Disney Princess + Brother Bear (Europe) (En+En,Fr,De,Es,It,Nl,Sv,Da)">
+		<description>2 Games in 1 - Disneys Prinzessinnen + Baerenbrueder (Germany) (De+En,Fr,De,Es,It,Nl,Sv,Da)</description>
+		<release name="2 Games in 1 - Disneys Prinzessinnen + Baerenbrueder (Germany) (De+En,Fr,De,Es,It,Nl,Sv,Da)" region="GER"/>
+		<rom name="2 Games in 1 - Disneys Prinzessinnen + Baerenbrueder (Germany) (De+En,Fr,De,Es,It,Nl,Sv,Da).gba" size="16777216" crc="52c8a11f" md5="2fcdf9b4f16219242bf5cdd34336f0e6" sha1="16b3fa898912ab677c664d0edc96f516d89447e7"/>
+	</game>
+	<game name="RealSports Basketball (USA) (82-11-05) (Proto)" cloneof="RealSports Basketball (USA)">
+		<description>RealSports Basketball (USA) (82-11-05) (Proto)</description>
+		<rom name="RealSports Basketball (USA) (82-11-05) (Proto).a52" size="16384" crc="0f996184" md5="a71bfb11676a4e4694af66e311721a1b" sha1="2b43f74db4833272d2048de8fa32b857af8e090f"/>
+	</game>
+	<game name="Xevious (USA) (01-18-1984) (Proto)">
+		<description>Xevious (USA) (01-18-1984) (Proto) (Unreleased prototype but nearly 100% finished version)</description>
+		<release name="Xevious (USA) (01-18-1984) (Proto)" region="USA"/>
+		<rom name="Xevious (USA) (01-18-1984) (Proto).a26" size="8192" crc="f5802a6c" md5="af6f3e9718bccfcd8afb421f96561a34" sha1="53f941cabf661a9ce763142b070571f6fd4c8820" status="verified"/>
+	</game>
+	<game name="Great Wall, The (Asia) (PAL) (Unl)">
+		<description>Great Wall, The (Asia) (PAL) (Unl)</description>
+		<release name="Great Wall, The (Asia) (PAL) (Unl)" region="ASI"/>
+		<rom name="Great Wall, The (Asia) (PAL) (Unl).nes" size="65536" crc="795bc424" md5="da05295f779b882a113b04e445b166f9" sha1="29320367b20f6d6243cfb53e094ecd14aab7af2a"/>
+	</game>
+	<game name="Awesomenauts (World) (v1) (Title Update)">
+		<description>Awesomenauts (World) (v1) (Title Update)</description>
+		<rom name="58410B5A\000B0000\55CD8167D6D2E31B142A27796F451E86D5F9285B58" size="3907584" crc="a44cd7dd" md5="fdcaa5920d7f4fd508284138c89da4db" sha1="7eebf823eed50c32f15ba5515fb4b29f1e7b7aa6"/>
+	</game>
+	<game name="'Splosion Man (World) (XBLA)">
+		<description>'Splosion Man (World) (XBLA)</description>
+		<rom name="5841098F\000D0000\E42409217241BEFFDAE1EFBA10F7DA460283CFB358" size="355491840" crc="3560bce2" md5="216f81886638350fe215cff56454b156" sha1="c31519e34443c04ea231254b2253bd24f4aec0a6"/>
+	</game>
+	<game name="Contra Force (199x)(-)(US)[h2 Acey][p][infinite lives, iNES title]">
+		<description>Contra Force (199x)(-)(US)[h2 Acey][p][infinite lives, iNES title]</description>
+		<rom name="Contra Force (199x)(-)(US)[h2 Acey][p][infinite lives, iNES title].nes" size="262288" crc="6b5a8f8f" md5="9d0388cf45138f6a0582cda6de0d30f4" sha1="534ede78cdd151d57014c9d3081968f6e801ba9a"/>
+	</game>
+	<game name="Bill Elliott's NASCAR Challenge (1991-04)(Konami)(US)[h2 Vimm][iNES title]">
+		<description>Bill Elliott's NASCAR Challenge (1991-04)(Konami)(US)[h2 Vimm][iNES title]</description>
+		<rom name="Bill Elliott's NASCAR Challenge (1991-04)(Konami)(US)[h2 Vimm][iNES title].nes" size="393360" crc="10d1fff7" md5="5970927e7bdb0a2383df21b58fa69724" sha1="358f578fa9c9adf5fac9108f453e0323b7746921"/>
+	</game>
+	<game name="Super Giama Bros. (200x)(Greek Roms)(el)[h][Super Mario Bros.]">
+		<description>Super Giama Bros. (200x)(Greek Roms)(el)[h][Super Mario Bros.]</description>
+		<rom name="Super Giama Bros. (200x)(Greek Roms)(el)[h][Super Mario Bros.].nes" size="40976" crc="983f3503" md5="dd24d3b6cab1844e1c2c75566e9131f4" sha1="7ddb741bd993a5c2a0bc26f2f81ae873cff8aecf"/>
+	</game>
+	<game name="Yoshi Island (200x)(Ku-Pi)(JP)[h][Super Mario Bros.]">
+		<description>Yoshi Island (200x)(Ku-Pi)(JP)[h][Super Mario Bros.]</description>
+		<rom name="Yoshi Island (200x)(Ku-Pi)(JP)[h][Super Mario Bros.].nes" size="40976" crc="675f17bf" md5="06e5a4f1299f5b95953b4b19857607ec" sha1="f9995e57e9680f1da993e1453996512f2dd88ba6"/>
+	</game>
+	<game name="Legend of Zelda DX, The v0.2 (1999-05-14)(MM2)[h][Legend of Zelda, The]">
+		<description>Legend of Zelda DX, The v0.2 (1999-05-14)(MM2)[h][Legend of Zelda, The]</description>
+		<rom name="Legend of Zelda DX, The v0.2 (1999-05-14)(MM2)[h][Legend of Zelda, The].nes" size="131088" crc="ed8f602e" md5="013ca23e476fffae2a2fb9d37fc02e7e" sha1="2f8a9698bafc805a7f99df3cb115e28796d6fcba"/>
+	</game>
+	<game name="Tecmo Super Bowl 1999 (2000)(RMM1976)(US)[h][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl 1999 (2000)(RMM1976)(US)[h][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl 1999 (2000)(RMM1976)(US)[h][Tecmo Super Bowl].nes" size="393232" crc="75114806" md5="2a905d56cac4879fed1d632d2d5b9084" sha1="9f63e90e57e5b9efe187f8820f18e2cc9b8feb69"/>
+	</game>
+	<game name="Tank Demo (1999)(Bell, Ian)(PD)[NTSC, mapper 1]">
+		<description>Tank Demo (1999)(Bell, Ian)(PD)[NTSC, mapper 1]</description>
+		<rom name="Tank Demo (1999)(Bell, Ian)(PD)[NTSC, mapper 1].nes" size="131088" crc="053bc127" md5="73612a63bd43f652c2ed239884530200" sha1="60bbd20c87e89d630b04c80f3c9554c499278c1a"/>
+	</game>
+	<game name="Tank Demo (1999)(Bell, Ian)(PD)[PAL, mapper 0]">
+		<description>Tank Demo (1999)(Bell, Ian)(PD)[PAL, mapper 0]</description>
+		<rom name="Tank Demo (1999)(Bell, Ian)(PD)[PAL, mapper 0].nes" size="32784" crc="7c95ee9f" md5="44c37daf1183140ffc7ee1282a5c1b94" sha1="db3a0cbb156b59fde4903f5dda73a391c4982424"/>
+	</game>
+	<game name="Captain Tsubasa Vol. II - Super Striker (199x)(-)(ar)[h Cah4e3][p][ripped from SuperGame 9 in 1]">
+		<description>Captain Tsubasa Vol. II - Super Striker (199x)(-)(ar)[h Cah4e3][p][ripped from SuperGame 9 in 1]</description>
+		<rom name="Captain Tsubasa Vol. II - Super Striker (199x)(-)(ar)[h Cah4e3][p][ripped from SuperGame 9 in 1].nes" size="393232" crc="d6a61ad0" md5="99544e40f4ca7ea1d1a77c709eff98b3" sha1="5638051f23b163cc8b01fea2f0baa854ac9d0535"/>
+	</game>
+	<game name="Tower of Card Captor Sakura (200x)(PaL)[h][Tower of Druaga]">
+		<description>Tower of Card Captor Sakura (200x)(PaL)[h][Tower of Druaga]</description>
+		<rom name="Tower of Card Captor Sakura (200x)(PaL)[h][Tower of Druaga].nes" size="40976" crc="5bba7c43" md5="8dbd07ff73dffe1c916431610b4f2e11" sha1="7f44599a0b0656f17317a547f8e3c3b3f75b73ee"/>
+	</game>
+	<game name="Tecmo Super Bowl - NCAA Rose Bowl 2006 (2007-02-04)(bigjim28)(US)[h][Tecmo Super Bowl, based on Rose Bowl 2002]">
+		<description>Tecmo Super Bowl - NCAA Rose Bowl 2006 (2007-02-04)(bigjim28)(US)[h][Tecmo Super Bowl, based on Rose Bowl 2002]</description>
+		<rom name="Tecmo Super Bowl - NCAA Rose Bowl 2006 (2007-02-04)(bigjim28)(US)[h][Tecmo Super Bowl, based on Rose Bowl 2002].nes" size="393232" crc="c54f546b" md5="1dfae2f8dd4f1e9cad707440cdd07b8d" sha1="54ce7a8fd0d9f4345bc562c33d97da7f750cbf0c"/>
+	</game>
+	<game name="Kinnikuman - Muscle Tag Match (1985-11-08)(Bandai)(JP)[tr zh madcell][v20060804]">
+		<description>Kinnikuman - Muscle Tag Match (1985-11-08)(Bandai)(JP)[tr zh madcell][v20060804]</description>
+		<rom name="Kinnikuman - Muscle Tag Match (1985-11-08)(Bandai)(JP)[tr zh madcell][v20060804].nes" size="32784" crc="426118d6" md5="4dd83374c03c3b47459f7ad73e1f15e6" sha1="dab5bd19099f32a7b46689b4bd27efc9d89efd86"/>
+	</game>
 	<game name="Akira (1988-12-24)(Taito)(JP)[h][t][b][mapper 4]">
 		<description>Akira (1988-12-24)(Taito)(JP)[h][t][b][mapper 4]</description>
 		<rom name="Akira (1988-12-24)(Taito)(JP)[h][t][b][mapper 4].nes" size="393744" crc="70186574" md5="7ab27995172bf5a715847334227d202c" sha1="22a093128dc7bd248bb4aa7ef898aeb13bede17f"/>
