@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<!DOCTYPE datafile PUBLIC "-//Logiqx//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
+<datafile>
+	<header>
+		<name>Nintendo - Nintendo Entertainment System (Parent-Clone)</name>
+		<description>Nintendo - Nintendo Entertainment System (Parent-Clone)</description>
+		<clrmamepro header="No-Intro_NES.xml"/>
+		<romcenter plugin="nes.dll"/>
+		<version>20190218-202723</version>
+		<date>20190218-202723</date>
+		<author>alexian, BitLooter</author>
+		<url>www.no-intro.org</url>
+	</header>
+	<game name="Elder Scrolls Travels, The - Oblivion (USA) (Beta) (09-06-2006)">
+		<description>Elder Scrolls Travels, The - Oblivion (USA) (Beta) (09-06-2006) (1/5 Dump Of "The_Elder_Scrolls_Travels_Oblivion_USA_Beta_XX_XX_200X_PSP-iND" Pack.)</description>
+		<release name="Elder Scrolls Travels, The - Oblivion (USA) (Beta) (09-06-2006)" region="USA"/>
+		<rom name="Elder Scrolls Travels, The - Oblivion (USA) (Beta) (09-06-2006).iso" size="66760704" crc="b00ff299" md5="8960aa74e53a1ea3655b7f74eee72bf0" sha1="144e7291974f520e2876d5a140ff03dad10d4c2a" status="verified"/>
+	</game>
+	<game name="Big Bang Bang (Japan) (Sample) (2003-09-22)">
+		<description>Big Bang Bang (Japan) (Sample) (2003-09-22) (Also known as "Moonball")</description>
+		<rom name="Big Bang Bang (Japan) (Sample) (2003-09-22).iso" size="1605632" crc="9f07cfd9" md5="ab3c6b0874a62bd79fa467bf6559dead" sha1="d0166553d97cca2e9106ff2b4a64b1932afa93b7"/>
+	</game>
+	<game name="2 Games in 1 - Disneys Prinzessinnen + Baerenbrueder (Germany) (De+En,Fr,De,Es,It,Nl,Sv,Da)" cloneof="2 Games in 1 - Disney Princess + Brother Bear (Europe) (En+En,Fr,De,Es,It,Nl,Sv,Da)">
+		<description>2 Games in 1 - Disneys Prinzessinnen + Baerenbrueder (Germany) (De+En,Fr,De,Es,It,Nl,Sv,Da)</description>
+		<release name="2 Games in 1 - Disneys Prinzessinnen + Baerenbrueder (Germany) (De+En,Fr,De,Es,It,Nl,Sv,Da)" region="GER"/>
+		<rom name="2 Games in 1 - Disneys Prinzessinnen + Baerenbrueder (Germany) (De+En,Fr,De,Es,It,Nl,Sv,Da).gba" size="16777216" crc="52c8a11f" md5="2fcdf9b4f16219242bf5cdd34336f0e6" sha1="16b3fa898912ab677c664d0edc96f516d89447e7"/>
+	</game>
+	<game name="RealSports Basketball (USA) (82-11-05) (Proto)" cloneof="RealSports Basketball (USA)">
+		<description>RealSports Basketball (USA) (82-11-05) (Proto)</description>
+		<rom name="RealSports Basketball (USA) (82-11-05) (Proto).a52" size="16384" crc="0f996184" md5="a71bfb11676a4e4694af66e311721a1b" sha1="2b43f74db4833272d2048de8fa32b857af8e090f"/>
+	</game>
+	<game name="Xevious (USA) (01-18-1984) (Proto)">
+		<description>Xevious (USA) (01-18-1984) (Proto) (Unreleased prototype but nearly 100% finished version)</description>
+		<release name="Xevious (USA) (01-18-1984) (Proto)" region="USA"/>
+		<rom name="Xevious (USA) (01-18-1984) (Proto).a26" size="8192" crc="f5802a6c" md5="af6f3e9718bccfcd8afb421f96561a34" sha1="53f941cabf661a9ce763142b070571f6fd4c8820" status="verified"/>
+	</game>
+	<game name="Great Wall, The (Asia) (PAL) (Unl)">
+		<description>Great Wall, The (Asia) (PAL) (Unl)</description>
+		<release name="Great Wall, The (Asia) (PAL) (Unl)" region="ASI"/>
+		<rom name="Great Wall, The (Asia) (PAL) (Unl).nes" size="65536" crc="795bc424" md5="da05295f779b882a113b04e445b166f9" sha1="29320367b20f6d6243cfb53e094ecd14aab7af2a"/>
+	</game>
+	<game name="Awesomenauts (World) (v1) (Title Update)">
+		<description>Awesomenauts (World) (v1) (Title Update)</description>
+		<rom name="58410B5A\000B0000\55CD8167D6D2E31B142A27796F451E86D5F9285B58" size="3907584" crc="a44cd7dd" md5="fdcaa5920d7f4fd508284138c89da4db" sha1="7eebf823eed50c32f15ba5515fb4b29f1e7b7aa6"/>
+	</game>
+	<game name="'Splosion Man (World) (XBLA)">
+		<description>'Splosion Man (World) (XBLA)</description>
+		<rom name="5841098F\000D0000\E42409217241BEFFDAE1EFBA10F7DA460283CFB358" size="355491840" crc="3560bce2" md5="216f81886638350fe215cff56454b156" sha1="c31519e34443c04ea231254b2253bd24f4aec0a6"/>
+	</game>
+	<game name="Contra Force (199x)(-)(US)[h2 Acey][p][infinite lives, iNES title]">
+		<description>Contra Force (199x)(-)(US)[h2 Acey][p][infinite lives, iNES title]</description>
+		<rom name="Contra Force (199x)(-)(US)[h2 Acey][p][infinite lives, iNES title].nes" size="262288" crc="6b5a8f8f" md5="9d0388cf45138f6a0582cda6de0d30f4" sha1="534ede78cdd151d57014c9d3081968f6e801ba9a"/>
+	</game>
+	<game name="Bill Elliott's NASCAR Challenge (1991-04)(Konami)(US)[h2 Vimm][iNES title]">
+		<description>Bill Elliott's NASCAR Challenge (1991-04)(Konami)(US)[h2 Vimm][iNES title]</description>
+		<rom name="Bill Elliott's NASCAR Challenge (1991-04)(Konami)(US)[h2 Vimm][iNES title].nes" size="393360" crc="10d1fff7" md5="5970927e7bdb0a2383df21b58fa69724" sha1="358f578fa9c9adf5fac9108f453e0323b7746921"/>
+	</game>
+	<game name="Super Giama Bros. (200x)(Greek Roms)(el)[h][Super Mario Bros.]">
+		<description>Super Giama Bros. (200x)(Greek Roms)(el)[h][Super Mario Bros.]</description>
+		<rom name="Super Giama Bros. (200x)(Greek Roms)(el)[h][Super Mario Bros.].nes" size="40976" crc="983f3503" md5="dd24d3b6cab1844e1c2c75566e9131f4" sha1="7ddb741bd993a5c2a0bc26f2f81ae873cff8aecf"/>
+	</game>
+	<game name="Yoshi Island (200x)(Ku-Pi)(JP)[h][Super Mario Bros.]">
+		<description>Yoshi Island (200x)(Ku-Pi)(JP)[h][Super Mario Bros.]</description>
+		<rom name="Yoshi Island (200x)(Ku-Pi)(JP)[h][Super Mario Bros.].nes" size="40976" crc="675f17bf" md5="06e5a4f1299f5b95953b4b19857607ec" sha1="f9995e57e9680f1da993e1453996512f2dd88ba6"/>
+	</game>
+	<game name="Legend of Zelda DX, The v0.2 (1999-05-14)(MM2)[h][Legend of Zelda, The]">
+		<description>Legend of Zelda DX, The v0.2 (1999-05-14)(MM2)[h][Legend of Zelda, The]</description>
+		<rom name="Legend of Zelda DX, The v0.2 (1999-05-14)(MM2)[h][Legend of Zelda, The].nes" size="131088" crc="ed8f602e" md5="013ca23e476fffae2a2fb9d37fc02e7e" sha1="2f8a9698bafc805a7f99df3cb115e28796d6fcba"/>
+	</game>
+	<game name="Tecmo Super Bowl 1999 (2000)(RMM1976)(US)[h][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl 1999 (2000)(RMM1976)(US)[h][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl 1999 (2000)(RMM1976)(US)[h][Tecmo Super Bowl].nes" size="393232" crc="75114806" md5="2a905d56cac4879fed1d632d2d5b9084" sha1="9f63e90e57e5b9efe187f8820f18e2cc9b8feb69"/>
+	</game>
+	<game name="Tank Demo (1999)(Bell, Ian)(PD)[NTSC, mapper 1]">
+		<description>Tank Demo (1999)(Bell, Ian)(PD)[NTSC, mapper 1]</description>
+		<rom name="Tank Demo (1999)(Bell, Ian)(PD)[NTSC, mapper 1].nes" size="131088" crc="053bc127" md5="73612a63bd43f652c2ed239884530200" sha1="60bbd20c87e89d630b04c80f3c9554c499278c1a"/>
+	</game>
+	<game name="Tank Demo (1999)(Bell, Ian)(PD)[PAL, mapper 0]">
+		<description>Tank Demo (1999)(Bell, Ian)(PD)[PAL, mapper 0]</description>
+		<rom name="Tank Demo (1999)(Bell, Ian)(PD)[PAL, mapper 0].nes" size="32784" crc="7c95ee9f" md5="44c37daf1183140ffc7ee1282a5c1b94" sha1="db3a0cbb156b59fde4903f5dda73a391c4982424"/>
+	</game>
+	<game name="Captain Tsubasa Vol. II - Super Striker (199x)(-)(ar)[h Cah4e3][p][ripped from SuperGame 9 in 1]">
+		<description>Captain Tsubasa Vol. II - Super Striker (199x)(-)(ar)[h Cah4e3][p][ripped from SuperGame 9 in 1]</description>
+		<rom name="Captain Tsubasa Vol. II - Super Striker (199x)(-)(ar)[h Cah4e3][p][ripped from SuperGame 9 in 1].nes" size="393232" crc="d6a61ad0" md5="99544e40f4ca7ea1d1a77c709eff98b3" sha1="5638051f23b163cc8b01fea2f0baa854ac9d0535"/>
+	</game>
+	<game name="Tower of Card Captor Sakura (200x)(PaL)[h][Tower of Druaga]">
+		<description>Tower of Card Captor Sakura (200x)(PaL)[h][Tower of Druaga]</description>
+		<rom name="Tower of Card Captor Sakura (200x)(PaL)[h][Tower of Druaga].nes" size="40976" crc="5bba7c43" md5="8dbd07ff73dffe1c916431610b4f2e11" sha1="7f44599a0b0656f17317a547f8e3c3b3f75b73ee"/>
+	</game>
+	<game name="Tecmo Super Bowl - NCAA Rose Bowl 2006 (2007-02-04)(bigjim28)(US)[h][Tecmo Super Bowl, based on Rose Bowl 2002]">
+		<description>Tecmo Super Bowl - NCAA Rose Bowl 2006 (2007-02-04)(bigjim28)(US)[h][Tecmo Super Bowl, based on Rose Bowl 2002]</description>
+		<rom name="Tecmo Super Bowl - NCAA Rose Bowl 2006 (2007-02-04)(bigjim28)(US)[h][Tecmo Super Bowl, based on Rose Bowl 2002].nes" size="393232" crc="c54f546b" md5="1dfae2f8dd4f1e9cad707440cdd07b8d" sha1="54ce7a8fd0d9f4345bc562c33d97da7f750cbf0c"/>
+	</game>
+	<game name="Kinnikuman - Muscle Tag Match (1985-11-08)(Bandai)(JP)[tr zh madcell][v20060804]">
+		<description>Kinnikuman - Muscle Tag Match (1985-11-08)(Bandai)(JP)[tr zh madcell][v20060804]</description>
+		<rom name="Kinnikuman - Muscle Tag Match (1985-11-08)(Bandai)(JP)[tr zh madcell][v20060804].nes" size="32784" crc="426118d6" md5="4dd83374c03c3b47459f7ad73e1f15e6" sha1="dab5bd19099f32a7b46689b4bd27efc9d89efd86"/>
+	</game>
+	<game name="Akira (1988-12-24)(Taito)(JP)[h][t][b][mapper 4]">
+		<description>Akira (1988-12-24)(Taito)(JP)[h][t][b][mapper 4]</description>
+		<rom name="Akira (1988-12-24)(Taito)(JP)[h][t][b][mapper 4].nes" size="393744" crc="70186574" md5="7ab27995172bf5a715847334227d202c" sha1="22a093128dc7bd248bb4aa7ef898aeb13bede17f"/>
+	</game>
+	<game name="God Slayer - Haruka Tenkuu no Sonata (1990-04-13)(SNK)(JP)[t2]">
+		<description>God Slayer - Haruka Tenkuu no Sonata (1990-04-13)(SNK)(JP)[t2]</description>
+		<rom name="God Slayer - Haruka Tenkuu no Sonata (1990-04-13)(SNK)(JP)[t2].nes" size="393488" crc="dfef53c9" md5="058daaf901a486c48dc106b50072e0b9" sha1="dd97c41f1ce22f5a9cca3683ae825aa2bbdae169"/>
+	</game>
+	<game name="Shin Jinrui - The New Type (1987-02-10)(Ricoh Elemex)(JP)[h Suchinhaun][title screen only]">
+		<description>Shin Jinrui - The New Type (1987-02-10)(Ricoh Elemex)(JP)[h Suchinhaun][title screen only]</description>
+		<rom name="Shin Jinrui - The New Type (1987-02-10)(Ricoh Elemex)(JP)[h Suchinhaun][title screen only].nes" size="65552" crc="8bd5ff50" md5="51cbdb0793cad6780f1111a42084f746" sha1="42dfab918420ec8891f9054e049f34b76dd7a557"/>
+	</game>
+	<game name="Mortal Kombat II (199x)(-)(AS)[p][a][turbo]">
+		<description>Mortal Kombat II (199x)(-)(AS)[p][a][turbo]</description>
+		<rom name="Mortal Kombat II (199x)(-)(AS)[p][a][turbo].nes" size="393232" crc="2f54b777" md5="4eb9ad174cb4f123efadc0b17bb6d7d2" sha1="57038378bb700964ed49c0b36b2e2ead2360c753"/>
+	</game>
+	<game name="Wai Wai World (1988-01-14)(Konami)(JP)[tr en Neo DemiForce][v.VRCbeta-19971216]">
+		<description>Wai Wai World (1988-01-14)(Konami)(JP)[tr en Neo DemiForce][v.VRCbeta-19971216]</description>
+		<rom name="Wai Wai World (1988-01-14)(Konami)(JP)[tr en Neo DemiForce][v.VRCbeta-19971216].nes" size="262160" crc="2559c8cc" md5="dbec3c1b05a2fe006a639b128957966b" sha1="df7bf622666d08ea075c99878e21882e1074e581"/>
+	</game>
+	<game name="Wagan Land (1989-02-09)(Namco)(JP)[h Vimm][tr en Alan Midas][v.wag.yan, iNES title]">
+		<description>Wagan Land (1989-02-09)(Namco)(JP)[h Vimm][tr en Alan Midas][v.wag.yan, iNES title]</description>
+		<rom name="Wagan Land (1989-02-09)(Namco)(JP)[h Vimm][tr en Alan Midas][v.wag.yan, iNES title].nes" size="196752" crc="5066af3a" md5="57af1c18b6f24c74e1232ef984a421d8" sha1="a8e57ff7d565e35ac0da55b8f74a834176fc1619"/>
+	</game>
+	<game name="20 in 1 (19xx)(-)(AS)[p][mapper 61]">
+		<description>20 in 1 (19xx)(-)(AS)[p][mapper 61]</description>
+		<rom name="20 in 1 (19xx)(-)(AS)[p][mapper 61].nes" size="524304" crc="8b4718b6" md5="e4cf231d86fdee1bd9de53e9e753c7bf" sha1="61778695aa6f417e81dfba228425a59b6fea1e66"/>
+	</game>
+	<game name="110 in 1 (19xx)(-)(AS)[h][p][menu only]">
+		<description>110 in 1 (19xx)(-)(AS)[h][p][menu only]</description>
+		<rom name="110 in 1 (19xx)(-)(AS)[h][p][menu only].nes" size="24592" crc="4ccd6a7d" md5="0b9f32fda0f09dea2eec390c083ffcd5" sha1="4e039f75345a2bda53d5133cee976bf6c4c3a957"/>
+	</game>
+	<game name="Tecmo Super Bowl - WCTA Season 2 Round 01 (2003)(World Championship Tecmo Association)(US)[h][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl - WCTA Season 2 Round 01 (2003)(World Championship Tecmo Association)(US)[h][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl - WCTA Season 2 Round 01 (2003)(World Championship Tecmo Association)(US)[h][Tecmo Super Bowl].nes" size="393232" crc="3efdf950" md5="723d490497f68d7d66f5e2fa297f66d9" sha1="825293efa23e3c4fbd8a85df4bee0c4a4f17a185"/>
+	</game>
+	<game name="Tecmo Super Bowl - TWL Season 1 Week 00 - PreSeason (200x)(TecmoWorld League)(US)[h12][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl - TWL Season 1 Week 00 - PreSeason (200x)(TecmoWorld League)(US)[h12][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl - TWL Season 1 Week 00 - PreSeason (200x)(TecmoWorld League)(US)[h12][Tecmo Super Bowl].nes" size="393232" crc="33f82cad" md5="5fa3522446f0b61e5e9bfd0633b43e31" sha1="e8b2de6a00a77213629b92e84c4b37a9ee4bf601"/>
+	</game>
+	<game name="Tecmo Super Bowl 2006-2007 PreSeason (2006)(Lu)(US)[h2][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl 2006-2007 PreSeason (2006)(Lu)(US)[h2][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl 2006-2007 PreSeason (2006)(Lu)(US)[h2][Tecmo Super Bowl].nes" size="393232" crc="474f12fa" md5="1ded95611849d359125b8d5a61339dda" sha1="466eb9009e4d392365a44514ee67d92192f8962b"/>
+	</game>
+	<game name="Rush 'n Attack (1987-04)(Konami)(US)[h][tr][invulnerability, trans v.20030409]">
+		<description>Rush 'n Attack (1987-04)(Konami)(US)[h][tr][invulnerability, trans v.20030409]</description>
+		<rom name="Rush 'n Attack (1987-04)(Konami)(US)[h][tr][invulnerability, trans v.20030409].nes" size="131088" crc="fe7566c1" md5="105e961f20c01ba33e50fe651632f366" sha1="dc7e62e1d8f96c803ec3de6741ff29da6aca5da7"/>
+	</game>
+	<game name="Saint Seiya - Ougon Densetsu Kanketsu Hen (1988-05-31)(Bandai)(JP)[tr zh dwt_so][v0.01-20030109]">
+		<description>Saint Seiya - Ougon Densetsu Kanketsu Hen (1988-05-31)(Bandai)(JP)[tr zh dwt_so][v0.01-20030109]</description>
+		<rom name="Saint Seiya - Ougon Densetsu Kanketsu Hen (1988-05-31)(Bandai)(JP)[tr zh dwt_so][v0.01-20030109].nes" size="262160" crc="07dbae8d" md5="3a3c572a68ab6b1093da3fbb24a564fb" sha1="7334940519fbdf08eab29d6ece74b38d3eeee9b1"/>
+	</game>
+	<game name="Tecmo Super Bowl - WTL Season 8 Week 07 (200x)(World Tecmo League)(US)[h][Tecmo Super Bowl]">
+		<description>Tecmo Super Bowl - WTL Season 8 Week 07 (200x)(World Tecmo League)(US)[h][Tecmo Super Bowl]</description>
+		<rom name="Tecmo Super Bowl - WTL Season 8 Week 07 (200x)(World Tecmo League)(US)[h][Tecmo Super Bowl].nes" size="393236" crc="ad54883f" md5="a897784309a792057938f5d8b27445dc" sha1="b7006b450bb427199aeb867784b6195511a845d3"/>
+	</game>
+	<game name="1942 (1985-12-11)(Capcom)(JP-US)">
+		<description>1942 (1985-12-11)(Capcom)(JP-US)</description>
+		<rom name="1942 (1985-12-11)(Capcom)(JP-US).nes" size="40976" crc="e9cf747f" md5="4f90905fd77c1c9456bd5dfe1ceddc34" sha1="dfb068f72e9eb44e8dbdb181c235da6ccf6fb4bc"/>
+	</game>
+	<game name="Tao of 007 Rev PRG0, The (2002)(Quietust)[p]">
+		<description>Tao of 007 Rev PRG0, The (2002)(Quietust)[p]</description>
+		<rom name="Tao of 007 Rev PRG0, The (2002)(Quietust)[p].unf" size="139408" crc="07e7df3a" md5="32031db8c1467034699a04a4504a45f8" sha1="8dbdb67c69112cdf474fff5cb8281fdbd13e9c47"/>
+	</game>
+	<game name="Hunt for Red October Rev 1, The (1991-01)(Hi-Tech Expressions)(US)">
+		<description>Hunt for Red October Rev 1, The (1991-01)(Hi-Tech Expressions)(US)</description>
+		<rom name="Hunt for Red October Rev 1, The (1991-01)(Hi-Tech Expressions)(US).nes" size="262160" crc="64e47ba8" md5="6b2c9e0554fcc30f3ef2dcb0bda0bd26" sha1="3108e9afd20b5407509a8ceca32f91495080b1da"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening Rev 1 (1993)(Nintendo)(JP)">
+		<description>Legend of Zelda, The - Link's Awakening Rev 1 (1993)(Nintendo)(JP)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening Rev 1 (1993)(Nintendo)(JP).gb" size="524288" crc="ea20b82a" md5="3afbe0cf110fc6ad8def8377ecffc34d" sha1="80f5d111c7e2d79d39f6c25a37b54c3196d2bd12"/>
+	</game>
+	<game name="Empereur, L' Rev PRG0 (1991-05-23)(Koei)(JP)">
+		<description>Empereur, L' Rev PRG0 (1991-05-23)(Koei)(JP)</description>
+		<rom name="Empereur, L' Rev PRG0 (1991-05-23)(Koei)(JP).nes" size="393232" crc="df8a6bb6" md5="0f7eb49332c0acf1d97fc63a08c485c3" sha1="c536f33996e57adc249415fbe8a52b6cd3808918"/>
+	</game>
+	<game name="Richard Scarry's Busytown (1994-08-16)(Novotrade - Sega)(US)(proto)[Rev B]">
+		<description>Richard Scarry's Busytown (1994-08-16)(Novotrade - Sega)(US)(proto)[Rev B]</description>
+		<rom name="Richard Scarry's Busytown (1994-08-16)(Novotrade - Sega)(US)(proto)[Rev B].bin" size="2097152" crc="760cff62" md5="b75d0fb8fbb00f7274e9a733941b7017" sha1="85e5c63e0b8a536a134e20036c978724158be80e"/>
+	</game>
+	<game name="Tommy Thunder Rev 19971002 (1997)(Player 1)(proto)">
+		<description>Tommy Thunder Rev 19971002 (1997)(Player 1)(proto)</description>
+		<rom name="Tommy Thunder Rev 19971002 (1997)(Player 1)(proto).bin" size="8388608" crc="66734854" md5="99f95ad4a3b0c78b6f58a0fc3ad22db6" sha1="287fd68b5de520ade240889bc0133777fed5c671"/>
+	</game>
+	<game name="Glover Rev 1 (1998)(Hasbro Interactive)(US)(proto)[4th Sept Build 35]">
+		<description>Glover Rev 1 (1998)(Hasbro Interactive)(US)(proto)[4th Sept Build 35]</description>
+		<rom name="Glover Rev 1 (1998)(Hasbro Interactive)(US)(proto)[4th Sept Build 35].bin" size="25165824" crc="5e091e8f" md5="9cc14c73eb1202c3d19633ee05ad5fc4" sha1="3da3074fe998dbc6c47791a5b6dcbb5143b0fad8"/>
+	</game>
+	<game name="NTSC NES MMC3 IRQ Counter Test Rom 5 - MMC3 Rev A (2005-10-17)(Blargg)(PD)">
+		<description>NTSC NES MMC3 IRQ Counter Test Rom 5 - MMC3 Rev A (2005-10-17)(Blargg)(PD)</description>
+		<rom name="NTSC NES MMC3 IRQ Counter Test Rom 5 - MMC3 Rev A (2005-10-17)(Blargg)(PD).nes" size="16400" crc="1d814d25" md5="207f41e647ab39ad457bd74278166b45" sha1="6d82ac8fab5abdfd346c64b5d894bce8cdbfef0f"/>
+	</game>
+	<game name="Solitaire Rev 1.1 (1992)(American Video Entertainment)(US)">
+		<description>Solitaire Rev 1.1 (1992)(American Video Entertainment)(US)</description>
+		<rom name="Solitaire Rev 1.1 (1992)(American Video Entertainment)(US).nes" size="65552" crc="74aad703" md5="600b2bf74318ec87fdc3824a3331e75d" sha1="674d088fc80dd06df0e0c355c88a2a44a84c7f7e"/>
+	</game>
+	<game name="Jeopardy! Rev PRG 0 (1988-09)(GameTek)(US)">
+		<description>Jeopardy! Rev PRG 0 (1988-09)(GameTek)(US)</description>
+		<rom name="Jeopardy! Rev PRG 0 (1988-09)(GameTek)(US).nes" size="131088" crc="25687c07" md5="271e4b60787c7920534e8f56c953eda9" sha1="453aac7e29ebd6d1a4c4409482817bab7c43dfa5"/>
+	</game>
+	<game name="Bases Loaded Rev PRG0 (1988-07)(Jaleco)(US)">
+		<description>Bases Loaded Rev PRG0 (1988-07)(Jaleco)(US)</description>
+		<rom name="Bases Loaded Rev PRG0 (1988-07)(Jaleco)(US).nes" size="327696" crc="81855f3d" md5="63c2ddecb8053678b75d23a77ef6d241" sha1="1810f452b52600a2369ff0a8152db7e0eeb6d081"/>
+	</game>
+	<game name="Barbie Rev 0 (1991-12)(Hi-Tech Expressions)(US)">
+		<description>Barbie Rev 0 (1991-12)(Hi-Tech Expressions)(US)</description>
+		<rom name="Barbie Rev 0 (1991-12)(Hi-Tech Expressions)(US).nes" size="262160" crc="36df877a" md5="35297b58691ded8cd903ec1c3ab80282" sha1="b42fb8cb404c230cef46314f0be4a28445541454"/>
+	</game>
+	<game name="10-Yard Fight (Japan) (Rev 1)" cloneof="10-Yard Fight (USA, Europe)">
+		<description>10-Yard Fight (Japan) (Rev 1)</description>
+		<release name="10-Yard Fight (Japan) (Rev 1)" region="JPN"/>
+		<rom name="10-Yard Fight (Japan) (Rev 1).nes" size="24576" crc="44d21f83" md5="29bd9f8ef03c4d0ee75571b86aa60f36" sha1="d850b48aca4a3b1e503d2a483508564d774c536c" status="verified"/>
+	</game>
+	<game name="Dezaemon DD Rev 199802xx (1998)(Athena)(JP)(en-ja)(proto)[b missing system area][req Dezaemon 3D]">
+		<description>Dezaemon DD Rev 199802xx (1998)(Athena)(JP)(en-ja)(proto)[b missing system area][req Dezaemon 3D]</description>
+		<rom name="Dezaemon DD Rev 199802xx (1998)(Athena)(JP)(en-ja)(proto)[b missing system area][req Dezaemon 3D].ndd" size="64458560" crc="ccb84a39" md5="99a67674130f271f150db75c02d14f0a" sha1="d5cc4ab1fc79e27e54a9ad08c4dee47256352006"/>
+	</game>
+	<game name="Detana!! TwinBee (1991-12-06)(Konami)(JP)(Disk 1 of 2)">
+		<description>Detana!! TwinBee (1991-12-06)(Konami)(JP)(Disk 1 of 2)</description>
+		<rom name="Detana!! TwinBee[X68000](1of2)00.0.raw" size="370096" crc="99acc612" md5="6e17530b8f695947f58273a1ae05d983" sha1="ce861e0aa66d6279d9b53bb478114f80340e3b7a"/>
+		<rom name="Detana!! TwinBee[X68000](1of2)00.1.raw" size="423383" crc="64b80dec" md5="516371e5d750de57dcf58eb49cddc04d" sha1="430bddcb488d6d66d509a836ef965c281b6d812b"/>
+		<rom name="Detana!! TwinBee[X68000](1of2)01.0.raw" size="390105" crc="9724508f" md5="b5fe661d2810954a43ee3b1d4eb465a6" sha1="11d7b1ea8625750ce6471198503e7db4ebe152b7"/>
+	</game>
+	<game name="Infiltrator (1986)(Mindscape)(GB)[3.5DD]">
+		<description>Infiltrator (1986)(Mindscape)(GB)[3.5DD]</description>
+		<rom name="Infiltrator[PC](1of1)00.0.raw" size="231810" crc="66e59bce" md5="93c19deef3565e6ff63b0e44e835fa1d" sha1="088bce88fde1504ce19bf7c4c1893d757df4b731"/>
+		<rom name="Infiltrator[PC](1of1)00.1.raw" size="218085" crc="81a93281" md5="081046755032a2dc5dbdab092f40b17c" sha1="b34b302196bbd102590eeecaabe04fd62627fef3"/>
+		<rom name="Infiltrator[PC](1of1)01.0.raw" size="192105" crc="8977cde6" md5="5ed65b8cdd99affd1c6397d2aad0058b" sha1="34b29bb474cbed8555f662d267ab75d4ecdd1a3d"/>
+	</game>
+	<game name="Space Quest II - Chapter II - Vohaul's Revenge v2.0F (1989)(Sierra On-Line)(Disk 1 of 2)[3.5''][cp][Interp. 2.936][sn 3129289101202698]">
+		<description>Space Quest II - Chapter II - Vohaul's Revenge v2.0F (1989)(Sierra On-Line)(Disk 1 of 2)[3.5''][cp][Interp. 2.936][sn 3129289101202698]</description>
+		<rom name="Space Quest II[MS-DOS](1of2)00.0.raw" size="233324" crc="286ad82a" md5="ef84044cd9e6c22d35af7d22e4c2ff25" sha1="f354f552aebe2906b18db4238cb37d3ebea8caf8"/>
+		<rom name="Space Quest II[MS-DOS](1of2)00.1.raw" size="220210" crc="f49b6fd1" md5="e46cb7324424f53e3fb4089d88b3d97e" sha1="5c7b26ba4b9b44ce81ad60c431e02f18333c4e96"/>
+	</game>
+	<game name="Animal Crossing - Wild World (demo-kiosk) (2006)(Nintendo)(EU)(m5)">
+		<description>Animal Crossing - Wild World (demo-kiosk) (2006)(Nintendo)(EU)(M5)</description>
+		<rom name="Animal Crossing - Wild World (demo-kiosk) (2006)(Nintendo)(EU)(M5).nds" size="67108864" crc="47782d9b" md5="93632bd45e2e2b5938ff86059b61bc2d" sha1="0c6d9cc5c34d80fb6f373b53f5c2a190a46e1219"/>
+	</game>
+	<game name="A Nightmare on Elm Street (1990-10)(LJN)(US)">
+		<description>A Nightmare on Elm Street (1990-10)(LJN)(US)</description>
+		<rom name="A Nightmare on Elm Street (1990-10)(LJN)(US).nes" size="131088" crc="2a83ddc5" md5="2a13dab59e7545d39117439e738e48ba" sha1="b2d2e8a85dcec7a4b7a9a6a24f59be3103f7d49c"/>
+	</game>
+	<game name="1943 - The Battle of Midway (USA)">
+		<description>1943 - The Battle of Midway (USA)</description>
+		<release name="1943 - The Battle of Midway (USA)" region="USA"/>
+		<rom name="1943 - The Battle of Midway (USA).nes" size="131072" crc="12c6d5c7" md5="190d10a3685f87ba32135ac595283f36" sha1="1e76a86398f069da43b25351ef419be664d630c5" status="verified"/>
+	</game>
+	<game name="1943 - The Battle of Midway (Japan) (Beta)" cloneof="1943 - The Battle of Midway (USA)">
+		<description>1943 - The Battle of Midway (Japan) (Beta)</description>
+		<rom name="1943 - The Battle of Midway (Japan) (Beta).nes" size="131072" crc="3ff10e3d" md5="9315b733fd8d1cdf4339eaa587f39eca" sha1="ee478a1d06be0bb0442183eb61a6e2bd067344ec" status="verified"/>
+	</game>
+	<game name="1943 - The Battle of Valhalla (Japan)" cloneof="1943 - The Battle of Midway (USA)">
+		<description>1943 - The Battle of Valhalla (Japan)</description>
+		<release name="1943 - The Battle of Valhalla (Japan)" region="JPN"/>
+		<rom name="1943 - The Battle of Valhalla (Japan).nes" size="131072" crc="4e42f13a" md5="f3a8822ec4ad196348d6c959289d34e1" sha1="619c8c45c14bb26fee93d0f8646127f30e336128" status="verified"/>
+	</game>
+	<game name="Franky, Joe &amp; Dirk... On the Tiles (1993)(Elite)(EU)(M6)">
+		<description>Franky, Joe &amp; Dirk... On the Tiles (1993)(Elite)(EU)(M6)</description>
+		<rom name="Franky, Joe &amp; Dirk... On the Tiles (1993)(Elite)(EU)(M6).gb" size="131072" crc="caf5b372" md5="ea8d9e89565ff9e931118b9ea4712c29" sha1="b7e292cfd34d64546f158e548afa92efaf8c2acd"/>
+	</game>
+	<game name="Win, Lose or Draw (1990-03)(Hi-Tech Expressions)(US)">
+		<description>Win, Lose or Draw (1990-03)(Hi-Tech Expressions)(US)</description>
+		<rom name="Win, Lose or Draw (1990-03)(Hi-Tech Expressions)(US).nes" size="131088" crc="258d6838" md5="3ccc792f8e4d0b6bc5289f23a18a0c91" sha1="49773466c4296d77f0697c073ed66d4fe3375459"/>
+	</game>
+	<game name="Chevaliers Du Zodiaque, Les - La Legende D'Or (1987)(Bandai)(FR)[tr es Tanero][v0.50b]">
+		<description>Chevaliers Du Zodiaque, Les - La Legende D'Or (1987)(Bandai)(FR)[tr es Tanero][v0.50b]</description>
+		<rom name="Chevaliers Du Zodiaque, Les - La Legende D'Or (1987)(Bandai)(FR)[tr es Tanero][v0.50b].nes" size="262160" crc="36bea234" md5="438445ebbfd51f5982c68083d3834801" sha1="34a995329d64e3d9cd21260422710c5bf8c9c622"/>
+	</game>
+	<game name="Dirty Pair - Project Eden (1987-03-28)(Bandai)(JP)[tr en Ballzysoft][a2][v0.90]">
+		<description>Dirty Pair - Project Eden (1987-03-28)(Bandai)(JP)[tr en Ballzysoft][a2][v0.90]</description>
+		<rom name="Dirty Pair - Project Eden (1987-03-28)(Bandai)(JP)[tr en Ballzysoft][a2][v0.90].fds" size="131000" crc="89186dfb" md5="b4bca01346ddb09a63319ad7cba2ae37" sha1="3e2e96c32251cdb2860bfd11011ab8eb868beb67"/>
+	</game>
+	<game name="Big Challenge! Dogfight Spirit (1988-10-21)(Jaleco)(JP)[a]">
+		<description>Big Challenge! Dogfight Spirit (1988-10-21)(Jaleco)(JP)[a]</description>
+		<rom name="Big Challenge! Dogfight Spirit (1988-10-21)(Jaleco)(JP)[a].fds" size="131000" crc="4c4440bb" md5="22cc3bb482a2251a17cdfeaaa215f2ba" sha1="ea3bbfb7007b47ba89ac2f57ed96806bba874c8f"/>
+	</game>
+	<game name="Garfield - A Week of Garfield (1989-04-07)(Towa Chiki)(JP)[tr es Tom Maneiro][v.20040221-75%]">
+		<description>Garfield - A Week of Garfield (1989-04-07)(Towa Chiki)(JP)[tr es Tom Maneiro][v.20040221-75%]</description>
+		<rom name="Garfield - A Week of Garfield (1989-04-07)(Towa Chiki)(JP)[tr es Tom Maneiro][v.20040221-75%].nes" size="163856" crc="e08f82cd" md5="4c9710903779d1a99177777c0bd99ab2" sha1="8680520315b6824202ee5390821170efb90118e7"/>
+	</game>
+	<game name="Fuzzical Fighter (1991-05-17)(Sigma Shougi)(JP)[h Vimm][tr en WakdHacks][v1.00b-20000116, iNES title]">
+		<description>Fuzzical Fighter (1991-05-17)(Sigma Shougi)(JP)[h Vimm][tr en WakdHacks][v1.00b-20000116, iNES title]</description>
+		<rom name="Fuzzical Fighter (1991-05-17)(Sigma Shougi)(JP)[h Vimm][tr en WakdHacks][v1.00b-20000116, iNES title].nes" size="262288" crc="119fade3" md5="7c740fc340878f30b6e6582b38816c80" sha1="6e6a28171a00e74d611277a38cda9806e672b5d5"/>
+	</game>
+	<game name="100 in 1 Contra Function 16 (19xx)(-)(AS)[h][p][b5][iNES title]">
+		<description>100 in 1 Contra Function 16 (19xx)(-)(AS)[h][p][b5][iNES title]</description>
+		<rom name="100 in 1 Contra Function 16 (19xx)(-)(AS)[h][p][b5][iNES title].nes" size="1048720" crc="16bda9dc" md5="98cfbdb0bdd74ceb983454a37567c8a4" sha1="0cb5f2f2ebdf7714b319a977e051b713fd5f1bb7"/>
+	</game>
+	<game name="Airball (USA) (Proto 2)">
+		<description>Airball (USA) (Proto 2)</description>
+		<release name="Airball (USA) (Proto 2)" region="USA"/>
+		<rom name="Airball (USA) (Proto 2).nes" size="131072" crc="240863b9" md5="1c6d4e6c1051580dc836ae6c32e2c5f4" sha1="5971206093d76959efb4efa9a75186e582ac1453"/>
+	</game>
+	<game name="[BIOS] Game Boy Advance (World)">
+		<description>[BIOS] Game Boy Advance (World)</description>
+		<release name="[BIOS] Game Boy Advance (World)" region="EUR"/>
+		<release name="[BIOS] Game Boy Advance (World)" region="JPN"/>
+		<release name="[BIOS] Game Boy Advance (World)" region="USA"/>
+		<rom name="[BIOS] Game Boy Advance (World).gba" size="16384" crc="81977335" md5="a860e8c0b6d573d191e4ec7db1b1e4f6" sha1="300c20df6731a33952ded8c436f7f186d25d3492" status="verified"/>
+	</game>
+	<game name="2 Disney Games - Lilo &amp; Stitch 2 + Peter Pan - Return to Neverland (Europe) (En,Fr,De,Es+En,Fr,De,Es,It,Nl)">
+		<description>2 Disney Games - Lilo &amp; Stitch 2 + Peter Pan - Return to Neverland (Europe) (En,Fr,De,Es+En,Fr,De,Es,It,Nl)</description>
+		<release name="2 Disney Games - Lilo &amp; Stitch 2 + Peter Pan - Return to Neverland (Europe) (En,Fr,De,Es+En,Fr,De,Es,It,Nl)" region="EUR"/>
+		<rom name="2 Disney Games - Lilo &amp; Stitch 2 + Peter Pan - Return to Neverland (Europe) (En,Fr,De,Es+En,Fr,De,Es,It,Nl).gba" size="16777216" crc="75703943" md5="596df9a6f24ed99fe5e064ffd9382726" sha1="4b0455173b592407db9460b7e38fb209fd549772" status="verified"/>
+	</game>
+	<game name="Magical Mathematics -C.A.I.- (1990)(Sachen)(AS)[p][SA-014][copy protection]">
+		<description>Magical Mathematics -C.A.I.- (1990)(Sachen)(AS)[p][SA-014][copy protection]</description>
+		<rom name="Magical Mathematics -C.A.I.- (1990)(Sachen)(AS)[p][SA-014][copy protection].unf" size="41077" crc="087fccd5" md5="8a1687cc877272b5cc7c9e5a79350a00" sha1="a369a1cbe86063718fa2fa279064ce5523250ac0"/>
+	</game>
+	<game name="Addams Family, The (Europe) (En,Fr,De)">
+		<description>Addams Family, The (Europe) (En,Fr,De)</description>
+		<release name="Addams Family, The (Europe) (En,Fr,De)" region="EUR"/>
+		<rom name="Addams Family, The (Europe) (En,Fr,De).sfc" size="1048576" crc="82497f19" md5="1687307b1e71aedfebcf60810ca93da6" sha1="bc67e9a2632f751472e9f91e7e8ed2046a043dac" status="verified"/>
+	</game>
+	<game name="'89 Dennou Kyuusei Uranai (Japan)">
+		<description>'89 Dennou Kyuusei Uranai (Japan)</description>
+		<release name="'89 Dennou Kyuusei Uranai (Japan)" region="JPN"/>
+		<rom name="'89 Dennou Kyuusei Uranai (Japan).nes" size="262144" crc="ba58ed29" md5="4187a797e33bc96a96993220da6f09f7" sha1="56fe858d1035dce4b68520f457a0858bae7bb16d" status="verified"/>
+	</game>
+	<game name="10-Yard Fight (USA, Europe)">
+		<description>10-Yard Fight (USA, Europe)</description>
+		<release name="10-Yard Fight (USA, Europe)" region="EUR"/>
+		<release name="10-Yard Fight (USA, Europe)" region="USA"/>
+		<rom name="10-Yard Fight (USA, Europe).nes" size="40960" crc="3d564757" md5="bd2c15391b0641d43a35e83f5fce073a" sha1="016818bf6baaf779f4f5c1658880b81d23ea40ca" status="verified"/>
+	</game>
+	<game name="10-Yard Fight (Japan)" cloneof="10-Yard Fight (USA, Europe)">
+		<description>10-Yard Fight (Japan)</description>
+		<rom name="10-Yard Fight (Japan).nes" size="24576" crc="836c4fa7" md5="7f7a89ef806464338b1722c120648e7d" sha1="55dc03a493150258e10166cf38ed76dfade605d6" status="verified"/>
+	</game>
+	<game name="1942 (Japan, USA)">
+		<description>1942 (Japan, USA)</description>
+		<release name="1942 (Japan, USA)" region="JPN"/>
+		<release name="1942 (Japan, USA)" region="USA"/>
+		<rom name="1942 (Japan, USA).nes" size="40960" crc="171251e3" md5="0b66fdf88964235c434daff62837af60" sha1="7f57eace7cada7c36412a50f2299231b304527a8" status="verified"/>
+	</game>
+</datafile>

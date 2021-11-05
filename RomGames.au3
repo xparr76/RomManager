@@ -245,7 +245,8 @@ Func Start()
 							Case Not $isRevFound And StringRegExp($sValue, '^(Rev|Rev\s.*?)$')
 								; do nothing
 
-							Case Not $isDemoFound And CheckResourceFile($sValue, $afCodeDemo)
+							Case Not $isDemoFound And RegexOnResourceFile($sValue, '^(?i)', $afCodeDemo, '$')
+							;Case Not $isDemoFound And CheckResourceFile($sValue, $afCodeDemo)
 								$isDemoFound = True
 								$aDBKeyValue[$iDemo][$iDbValue] = $sValue
 
@@ -297,7 +298,7 @@ Func Start()
 								consoleLog('WARN  no match found: >' & $sValue & '< ' & '  ' & $sRow)
 								;MsgBox($MB_SYSTEMMODAL, 'Nothing Matched: ', '>' & $_sOtherValue & '<')
 								If $isMoreInfo Then
-									$aDBKeyValue[$iMoreInfo][$iDbValue] = $aDBKeyValue[$iMoreInfo][$iDbValue] & '::' & $sValue
+									$aDBKeyValue[$iMoreInfo][$iDbValue] = $aDBKeyValue[$iMoreInfo][$iDbValue] & ':' & $sValue
 								Else
 									$aDBKeyValue[$iMoreInfo][$iDbValue] = $aDBKeyValue[$iMoreInfo][$iDbValue] & $sValue
 								EndIf
